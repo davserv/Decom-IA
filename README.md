@@ -22,6 +22,12 @@ git clone https://github.com/davserv/Decom-IA.git
 
 --------
 
+### RODAR NO CODESPACES 
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/davserv/Decom-IA?quickstart=1)
+
+--------
+
 <br />
 
 ## CONECTE-SE COM NÓS:
