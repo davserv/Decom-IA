@@ -1,12 +1,12 @@
 <img src="https://iabr.pages.dev/d-framework/icon/192/favicon.png" min-width="150px" max-width="150px" width="150px" align="right" alt="">
 
-# CHAT IABR | É UM CHATBOT ASSISTENTE DE IA.
+# DECOM IA | É UM AGENTE SIMPLES DE IA QUE RODA NO SEU TERMINAL.
 
-IABR É UM CHATBOT ASSISTENTE DE IA. APLICATIVO BY DEVELOPER DAVIDSONBPE...
+DECOM IA É UM AGENTE SIMPLES DE IA. APLICATIVO BY DEVELOPER DAVIDSONBPE...
 
 ----------
 
-# LINK CHAT IABR
+# LINK DECOM IA
 
 ```bash
 https://iabr.pages.dev/
