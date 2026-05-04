@@ -6,7 +6,7 @@ DECOM IA É UM AGENTE SIMPLES DE IA. APLICATIVO BY DEVELOPER DAVIDSONBPE...
 
 ----------
 
-# COMANDO DECOM IA
+### COMANDO DECOM IA
 
 ```bash
 chmod +x chat.sh && ./chat.sh
