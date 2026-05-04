@@ -28,6 +28,10 @@ git clone https://github.com/davserv/Decom-IA.git
 
 --------
 
+[![Decom-IA](https://raw.githubusercontent.com/davserv/Decom-IA/refs/heads/main/decom-ia.gif)](https://github.com/davserv/Decom-IA/)
+
+----------
+
 <br />
 
 ## CONECTE-SE COM NÓS:
