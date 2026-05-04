@@ -30,7 +30,7 @@ chmod +x chat.sh && ./chat.sh
 <br />
 
 <a href="https://dav7.pages.dev/" align="right" alt="Visitor count">
-<img height="30" src="https://profile-counter.glitch.me/davserv/count.svg" /></a>
+<img height="30" src="https://raw.githubusercontent.com/davserv/d-framework/refs/heads/img-iso/count.svg" /></a>
 
 <br />
 
