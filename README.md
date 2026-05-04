@@ -1,4 +1,4 @@
-<img src="https://iabr.pages.dev/d-framework/icon/192/favicon.png" min-width="150px" max-width="150px" width="150px" align="right" alt="">
+<img src="https://raw.githubusercontent.com/davserv/Decom-IA/refs/heads/main/icon.png" min-width="150px" max-width="150px" width="150px" align="right" alt="">
 
 # DECOM IA | É UM AGENTE SIMPLES DE IA QUE RODA NO SEU TERMINAL.
 
