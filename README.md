@@ -14,6 +14,14 @@ chmod +x chat.sh && ./chat.sh
 
 --------
 
+### GIT CLONE 
+
+```bash
+git clone https://github.com/davserv/Decom-IA.git
+```
+
+--------
+
 <br />
 
 ## CONECTE-SE COM NÓS:
