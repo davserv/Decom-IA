@@ -28,9 +28,17 @@ git clone https://github.com/davserv/Decom-IA.git
 
 --------
 
+### VIDEO
+
 [![Decom-IA](https://raw.githubusercontent.com/davserv/Decom-IA/refs/heads/main/decom-ia.gif)](https://github.com/davserv/Decom-IA/)
 
-----------
+--------
+
+### DOAR COM
+
+[![DOAR COM](https://img.shields.io/badge/PagBank-1bb99a?style=for-the-badge&logo=PagBank&logoColor=white)](https://pag.ae/7Y3uUnhg8)
+
+--------
 
 <br />
 
