@@ -60,6 +60,9 @@ git clone https://github.com/davserv/Decom-IA.git
 
 <br />
 
+
+<img src="https://devanalytics.vercel.app/p/m8voKzwna" min-width="1px" max-width="1px" width="1px">
+
 [youtube]: https://www.youtube.com/channel/UCHqvw9v2Fp6o006lUskoigg/
 [instagram]: https://www.instagram.com/davidsonbpe/
 [facebook]: https://www.facebook.com/decomrradio/
