@@ -28,6 +28,25 @@ git clone https://github.com/davserv/Decom-IA.git
 
 --------
 
+### PROVEDORES DE IA GRATIS
+
+* [OpenRouter](https://openrouter.ai/) `Get API Key`
+
+* [Clod.io](https://clod.io/) `Get API Key`
+
+* [HuggingFace](https://huggingface.co/models) `Get API Key`
+
+* [Build.Nvidia](https://build.nvidia.com/) `Get API Key`
+
+* [ollama](https://ollama.com/settings/keys) `Get API Key`
+
+* [DInference](https://panel.dinference.com/keys) `Get API Key`
+
+* [Kilo.AI](https://app.kilo.ai/) `Get API Key`
+
+--------
+
+
 ### VIDEO
 
 [![Decom-IA](https://raw.githubusercontent.com/davserv/Decom-IA/refs/heads/main/decom-ia.gif)](https://github.com/davserv/Decom-IA/)
