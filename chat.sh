@@ -84,7 +84,7 @@ while true; do
           }
         ],
         \"temperature\": 0.7,
-        \"max_completion_tokens\": 4096
+        \"max_completion_tokens\": 6096
       }")
 
     # Captura resposta
