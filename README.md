@@ -40,6 +40,8 @@ git clone https://github.com/davserv/Decom-IA.git
 
 * [ollama](https://ollama.com/settings/keys) `Get API Key`
 
+* [GROQ](https://console.groq.com/keys) `Get API Key`
+
 * [DInference](https://panel.dinference.com/keys) `Get API Key`
 
 * [Kilo.AI](https://app.kilo.ai/) `Get API Key`
