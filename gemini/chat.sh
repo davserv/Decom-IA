@@ -5,9 +5,9 @@
 # =========================
 API_KEY="${GEMINI_API_KEY:-SUA_API_KEY_AQUI}"
 
-API_URL="https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
+API_URL="https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent"
 
-MODEL="Gemini 2.0 Flash"
+MODEL="gemini-flash-latest"
 
 # =========================
 # CORES
