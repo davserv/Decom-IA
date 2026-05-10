@@ -36,6 +36,8 @@ git clone https://github.com/davserv/Decom-IA.git
 
 * [HuggingFace](https://huggingface.co/models) `Get API Key`
 
+* [Google AI Studio](https://aistudio.google.com/app/api-keys) `Get API Key`
+
 * [Build.Nvidia](https://build.nvidia.com/) `Get API Key`
 
 * [ollama](https://ollama.com/settings/keys) `Get API Key`
