@@ -40,6 +40,8 @@ git clone https://github.com/davserv/Decom-IA.git
 
 * [Build.Nvidia](https://build.nvidia.com/) `Get API Key`
 
+* [Zen OpenCode](https://opencode.ai/auth) `Get API Key`
+
 * [ollama](https://ollama.com/settings/keys) `Get API Key`
 
 * [Groq](https://console.groq.com/keys) `Get API Key`
