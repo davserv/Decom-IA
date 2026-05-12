@@ -18,6 +18,30 @@ chmod +x chat.sh && ./chat.sh
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/davserv/Decom-IA?quickstart=1)
 
+
+--------
+
+### INSTALE O OLLAMA 
+
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+--------
+
+### START OLLAMA 
+
+```bash
+ollama serve
+```
+--------
+
+### OLLAMA MODELS
+
+```bash
+ollama run qwen3:1.7b
+```
+
 --------
 
 ### GIT CLONE 
