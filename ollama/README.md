@@ -79,27 +79,7 @@ python app.py
 
 ### PROVEDORES DE IA GRATIS
 
-* [OpenRouter](https://openrouter.ai/) `Get API Key`
-
-* [Clod.io](https://clod.io/) `Get API Key`
-
-* [HuggingFace](https://huggingface.co/models) `Get API Key`
-
-* [Google AI Studio](https://aistudio.google.com/app/api-keys) `Get API Key`
-
-* [Build.Nvidia](https://build.nvidia.com/) `Get API Key`
-
-* [Zen OpenCode](https://opencode.ai/auth) `Get API Key`
-
 * [ollama](https://ollama.com/settings/keys) `Get API Key`
-
-* [Groq](https://console.groq.com/keys) `Get API Key`
-
-* [Fireworks](https://app.fireworks.ai/) `Get API Key`
-
-* [DInference](https://panel.dinference.com/keys) `Get API Key`
-
-* [Kilo.AI](https://app.kilo.ai/) `Get API Key`
 
 --------
 
