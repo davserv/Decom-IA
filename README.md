@@ -7,7 +7,7 @@ DECOM IA É UM AGENTE SIMPLES DE IA. APLICATIVO BY DEVELOPER DAVIDSONBPE...
 ----------
 
 
-| [HOME](https://davserv.github.io/Decom-IA/) | [WINDOWS](https://davserv.github.io/Decom-IA/wind/) | [OLLAMA](https://davserv.github.io/Decom-IA/ollama/) | [GEMINI](https://davserv.github.io/Decom-IA/gemini/) | [LMSTUDIO](https://davserv.github.io/Decom-IA/lmstudio/) |
+| [HOME](/Decom-IA/) | [WINDOWS](https://davserv.github.io/Decom-IA/wind/) | [OLLAMA](https://davserv.github.io/Decom-IA/ollama/) | [GEMINI](https://davserv.github.io/Decom-IA/gemini/) | [LMSTUDIO](https://davserv.github.io/Decom-IA/lmstudio/) |
 
 
 ----------
