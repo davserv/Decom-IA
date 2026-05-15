@@ -64,6 +64,10 @@ lms chat google/gemma-3-270m -s "OLÁ"
 ```bash
 https://lmstudio.ai/docs/cli
 ```
+```bash
+https://lmstudio.ai/docs/cli/local-models/chat
+```
+
 --------
 
 ### GIT CLONE 
