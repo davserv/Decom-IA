@@ -78,7 +78,7 @@ git clone https://github.com/davserv/Decom-IA.git
 ### CD LOCAL PASTA
 
 ```bash
-cd /lmstudio/
+cd /lmstudio/app
 ```
 
 --------
@@ -87,6 +87,8 @@ cd /lmstudio/
 
 ```bash
 pip install -r requirements.txt
+ou
+pip install flask requests
 ```
 --------
 
