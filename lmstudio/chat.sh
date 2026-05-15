@@ -6,7 +6,7 @@
 LM_API_TOKEN="${LM_API_TOKEN:-TOKEN_AQUI}"
 API_URL="http://localhost:1234/api/v1/chat"
 
-MODEL="google/gemma-3-270m"
+MODEL="google/gemma-3-1b"
 
 # =========================
 # CORES

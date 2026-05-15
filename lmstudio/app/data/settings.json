@@ -1,9 +1,0 @@
-{
-  "url": "http://localhost:1234",
-  "model": "google/gemma-3-270m",
-  "temperature": 0.7,
-  "max_tokens": 2048,
-  "top_p": 0.9,
-  "system_prompt": "Voce e um assistente de IA util, respeitoso e honesto. Responda sempre em portugues brasileiro, a menos que o usuario peca em outro idioma. Use markdown para formatar suas respostas.",
-  "context_length": 20
-}

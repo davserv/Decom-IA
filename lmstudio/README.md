@@ -46,14 +46,21 @@ lms ls
 ### LMSTUDIO MODELS
 
 ```bash
-lms chat google/gemma-3-270m
+lms chat google/gemma-3-1b
 ```
 --------
 
 ### LMSTUDIO MODELS-S
 
 ```bash
-lms chat google/gemma-3-270m -s "OLÁ"
+lms chat google/gemma-3-1b -s "OLÁ"
+```
+--------
+
+### EXCLUIR MODEL
+
+```bash
+find ~ -iname "*NOME-DO-MODEL*"
 ```
 --------
 
@@ -97,11 +104,10 @@ pip install flask requests
 ```bash
 python app.py
 ```
-
 --------
 
 
-### PROVEDORES DE IA GRATIS
+### PROVEDOR DE IA GRATIS
 
 * [LM Studio](https://lmstudio.ai/) `Get API Key`
 
