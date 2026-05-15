@@ -1,6 +1,11 @@
 #!/bin/bash
 
+# =========================
+# CONFIG API LOCAL
+# =========================
+LM_API_TOKEN="${LM_API_TOKEN:-TOKEN_AQUI}"
 API_URL="http://localhost:1234/api/v1/chat"
+
 MODEL="google/gemma-3-270m"
 
 # =========================
@@ -16,17 +21,6 @@ GRAY='\033[0;90m'
 NC='\033[0m'
 
 # =========================
-# VERIFICA JQ
-# =========================
-if ! command -v jq &> /dev/null; then
-    echo -e "${RED}❌ jq não instalado.${NC}"
-    echo ""
-    echo "Instale com:"
-    echo "sudo apt install jq"
-    exit 1
-fi
-
-# =========================
 # LIMPAR TELA
 # =========================
 clear
@@ -37,13 +31,13 @@ clear
 echo -e "${GREEN}"
 cat << "EOF"
 
-████  █████  ███   ███  █   █    ███  ███
-█   █ █     █     █   █ ██ ██     █  █   █
-█   █ ████  █     █   █ █ █ █     █  █████
-█   █ █     █     █   █ █   █     █  █   █
+████  █████  ███   ███  █   █    ███  ███  
+█   █ █     █     █   █ ██ ██     █  █   █ 
+█   █ ████  █     █   █ █ █ █     █  █████ 
+█   █ █     █     █   █ █   █     █  █   █ 
 ████  █████  ███   ███  █   █    ███ █   █
 
-            TERMINAL AI CHAT
+             TERMINAL AI CHAT
 
 EOF
 
@@ -58,18 +52,18 @@ echo ""
 # =========================
 while true; do
 
-    # PROMPT USUÁRIO
+    # Prompt
     echo -ne "${GREEN}Você${NC} ${GRAY}> ${NC}"
     read -r PERGUNTA
 
-    # SAIR
+    # Sair
     [[ "${PERGUNTA,,}" =~ ^(sair|exit)$ ]] && \
     echo -e "\n${GREEN}✅ Chat encerrado.${NC}\n" && break
 
-    # LIMPAR
+    # Limpar
     [[ "${PERGUNTA,,}" =~ ^(clear|limpar)$ ]] && clear && continue
 
-    # IGNORA VAZIO
+    # Ignora vazio
     [ -z "$PERGUNTA" ] && continue
 
     echo ""
@@ -79,46 +73,24 @@ while true; do
     # =========================
     # REQUISIÇÃO API
     # =========================
-    RESPONSE=$(curl -sS "$API_URL" \
-    -H "Authorization: Bearer $LM_API_TOKEN" \
-    -H "Content-Type: application/json" \
-    -d "{
-    \"model\": \"$MODEL\",
-    \"input\": \"$PERGUNTA\"
-    }")
+    RESPONSE=$(curl -s "$API_URL" \
+      -H "Authorization: Bearer $LM_API_TOKEN" \
+      -H "Content-Type: application/json" \
+      -d "{
+        \"model\": \"$MODEL\",
+        \"input\": \"$PERGUNTA\"
+      }")
 
     # =========================
     # CAPTURA RESPOSTA
     # =========================
-
-    # FORMATO ARRAY JSON
-    RESPOSTA=$(echo "$RESPONSE" | jq -r '.[0].content')
-
-    # Se vier null
-    if [ "$RESPOSTA" = "null" ] || [ -z "$RESPOSTA" ]; then
-    RESPOSTA=$(echo "$RESPONSE" | jq -r '.choices[0].message.content')
-    fi
-
-    # FORMATO RESPONSE
-    if [ -z "$RESPOSTA" ] || [ "$RESPOSTA" = "null" ]; then
-        RESPOSTA=$(echo "$RESPONSE" | jq -r '.response // empty')
-    fi
-
-    # FORMATO OUTPUT
-    if [ -z "$RESPOSTA" ] || [ "$RESPOSTA" = "null" ]; then
-        RESPOSTA=$(echo "$RESPONSE" | jq -r '.output // empty')
-    fi
-
-    # REMOVE ASPAS EXTRAS
-    RESPOSTA=$(echo "$RESPOSTA" | sed 's/\\"/"/g')
+    RESPOSTA=$(echo "$RESPONSE" | jq -r '.output // .response // .choices[0].message.content // empty')
 
     # =========================
     # ERRO
     # =========================
-    if [ -z "$RESPOSTA" ] || [ "$RESPOSTA" = "null" ]; then
+    if [ -z "$RESPOSTA" ]; then
         echo -e "${RED}❌ Erro ao obter resposta.${NC}"
-        echo ""
-        echo -e "${YELLOW}Resposta da API:${NC}"
         echo -e "${GRAY}$RESPONSE${NC}"
         echo ""
         continue
