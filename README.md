@@ -44,6 +44,8 @@ git clone https://github.com/davserv/Decom-IA.git
 
 * [ollama](https://ollama.com/settings/keys) `Get API Key`
 
+* [LM Studio](https://lmstudio.ai/) `Get API Key`
+
 * [Groq](https://console.groq.com/keys) `Get API Key`
 
 * [Fireworks](https://app.fireworks.ai/) `Get API Key`
