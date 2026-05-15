@@ -26,7 +26,6 @@ chmod +x chat.sh && ./chat.sh
 ```bash
 curl -fsSL https://lmstudio.ai/install.sh | bash
 ```
-
 --------
 
 ### START LMSTUDIO 
@@ -49,7 +48,6 @@ lms ls
 ```bash
 lms chat google/gemma-3-270m
 ```
-
 --------
 
 ### LMSTUDIO MODELS-S
@@ -67,7 +65,6 @@ https://lmstudio.ai/docs/cli
 ```bash
 https://lmstudio.ai/docs/cli/local-models/chat
 ```
-
 --------
 
 ### GIT CLONE 
