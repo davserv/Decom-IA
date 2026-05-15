@@ -10,20 +10,19 @@ DECOM IA É UM AGENTE SIMPLES DE IA. APLICATIVO BY DEVELOPER DAVIDSONBPE...
 
 ----------
 
+### RODAR NO CODESPACES 
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/davserv/Decom-IA?quickstart=1)
+
+--------
+
 ### COMANDO DECOM IA
 
 ```bash
 chmod +x chat.sh && ./chat.sh
 ```
-
 --------
 
-### RODAR NO CODESPACES 
-
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/davserv/Decom-IA?quickstart=1)
-
-
---------
 
 ### INSTALE O OLLAMA 
 
@@ -59,7 +58,7 @@ git clone https://github.com/davserv/Decom-IA.git
 ### CD LOCAL PASTA
 
 ```bash
-cd Decom-IA/ollama/app
+cd /ollama/app/
 ```
 
 --------
@@ -81,7 +80,7 @@ python app.py
 --------
 
 
-### PROVEDORES DE IA GRATIS
+### PROVEDOR DE IA GRATIS
 
 * [ollama](https://ollama.com/settings/keys) `Get API Key`
 

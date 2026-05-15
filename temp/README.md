@@ -18,6 +18,13 @@ DECOM IA É UM AGENTE SIMPLES DE IA. APLICATIVO BY DEVELOPER DAVIDSONBPE...
 
 --------
 
+### GIT CLONE 
+
+```bash
+git clone https://github.com/davserv/Decom-IA.git
+```
+--------
+
 ### COMANDO DECOM IA
 
 ```bash
@@ -25,96 +32,40 @@ chmod +x chat.sh && ./chat.sh
 ```
 --------
 
-### INSTALE O LMSTUDIO
+### PROVEDORES DE IA GRATIS
 
-```bash
-curl -fsSL https://lmstudio.ai/install.sh | bash
-```
---------
+* [OpenRouter](https://openrouter.ai/) `Get API Key`
 
-### START LMSTUDIO 
+* [Clod.io](https://clod.io/) `Get API Key`
 
-```bash
-lms server start
-lms server stop
-```
---------
+* [HuggingFace](https://huggingface.co/models) `Get API Key`
 
-### LMSTUDIO LISTAR
+* [Google AI Studio](https://aistudio.google.com/app/api-keys) `Get API Key`
 
-```bash
-lms ls
-```
---------
+* [Build.Nvidia](https://build.nvidia.com/) `Get API Key`
 
-### LMSTUDIO MODELS
+* [Zen OpenCode](https://opencode.ai/auth) `Get API Key`
 
-```bash
-lms chat google/gemma-3-1b
-```
---------
-
-### LMSTUDIO MODELS-S
-
-```bash
-lms chat google/gemma-3-1b -s "OLÁ"
-```
---------
-
-### EXCLUIR MODEL
-
-```bash
-find ~ -iname "*NOME-DO-MODEL*"
-```
---------
-
-### LMSTUDIO DOCS/CLI
-
-```bash
-https://lmstudio.ai/docs/cli
-```
-```bash
-https://lmstudio.ai/docs/cli/local-models/chat
-```
---------
-
-### GIT CLONE 
-
-```bash
-git clone https://github.com/davserv/Decom-IA.git
-```
-
---------
-
-### CD LOCAL PASTA
-
-```bash
-cd /lmstudio/app
-```
-
---------
-
-### ISTALAR FLASK
-
-```bash
-pip install -r requirements.txt
-ou
-pip install flask requests
-```
---------
-
-### RODE SERVIDOR PYTHON
-
-```bash
-python app.py
-```
---------
-
-
-### PROVEDOR DE IA GRATIS
+* [ollama](https://ollama.com/settings/keys) `Get API Key`
 
 * [LM Studio](https://lmstudio.ai/) `Get API Key`
 
+* [Groq](https://console.groq.com/keys) `Get API Key`
+
+* [Fireworks](https://app.fireworks.ai/) `Get API Key`
+
+* [DInference](https://panel.dinference.com/keys) `Get API Key`
+
+* [Kilo.AI](https://app.kilo.ai/) `Get API Key`
+
+* [G0I.AI](https://g0i.ai/) `Get API Key`
+
+--------
+
+
+### VIDEO
+
+[![Decom-IA](https://raw.githubusercontent.com/davserv/Decom-IA/refs/heads/main/decom-ia.gif)](https://github.com/davserv/Decom-IA/)
 
 --------
 
