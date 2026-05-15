@@ -6,6 +6,10 @@ DECOM IA É UM AGENTE SIMPLES DE IA. APLICATIVO BY DEVELOPER DAVIDSONBPE...
 
 ----------
 
+| [HOME](https://davserv.github.io/Decom-IA/) | [WINDOWS](https://davserv.github.io/wind/) | [OLLAMA](https://davserv.github.io/ollama/) | [GEMINI](https://davserv.github.io/gemini/) | [LMSTUDIO](https://davserv.github.io/lmstudio/) |
+
+----------
+
 ### COMANDO DECOM IA
 
 ```bash

@@ -12,6 +12,20 @@ DECOM IA É UM AGENTE SIMPLES DE IA. APLICATIVO BY DEVELOPER DAVIDSONBPE...
 
 ----------
 
+### GIT CLONE 
+
+```bash
+git clone https://github.com/davserv/Decom-IA.git
+```
+--------
+
+### CD LOCAL PASTA 
+
+```bash
+cd /gemini/
+```
+--------
+
 ### COMANDO DECOM IA
 
 ```bash
@@ -20,105 +34,14 @@ chmod +x chat.sh && ./chat.sh
 
 --------
 
-### RODAR NO CODESPACES 
-
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/davserv/Decom-IA?quickstart=1)
-
-
---------
-
-### INSTALE O LMSTUDIO
-
-```bash
-curl -fsSL https://lmstudio.ai/install.sh | bash
-```
---------
-
-### START LMSTUDIO 
-
-```bash
-lms server start
-lms server stop
-```
---------
-
-### LMSTUDIO LISTAR
-
-```bash
-lms ls
-```
---------
-
-### LMSTUDIO MODELS
-
-```bash
-lms chat google/gemma-3-1b
-```
---------
-
-### LMSTUDIO MODELS-S
-
-```bash
-lms chat google/gemma-3-1b -s "OLÁ"
-```
---------
-
-### EXCLUIR MODEL
-
-```bash
-find ~ -iname "*NOME-DO-MODEL*"
-```
---------
-
-### LMSTUDIO DOCS/CLI
-
-```bash
-https://lmstudio.ai/docs/cli
-```
-```bash
-https://lmstudio.ai/docs/cli/local-models/chat
-```
---------
-
-### GIT CLONE 
-
-```bash
-git clone https://github.com/davserv/Decom-IA.git
-```
-
---------
-
-### CD LOCAL PASTA
-
-```bash
-cd /lmstudio/app
-```
-
---------
-
-### ISTALAR FLASK
-
-```bash
-pip install -r requirements.txt
-ou
-pip install flask requests
-```
---------
-
-### RODE SERVIDOR PYTHON
-
-```bash
-python app.py
-```
---------
 
 
 ### PROVEDOR DE IA GRATIS
 
-* [LM Studio](https://lmstudio.ai/) `Get API Key`
-
+* [Google AI Studio](https://aistudio.google.com/app/api-keys) `Get API Key`
 
 --------
+
 
 ### DOAR COM
 
