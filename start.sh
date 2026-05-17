@@ -17,10 +17,11 @@ EOF
 
 git clone https://github.com/davserv/Decom-IA.git
 
-cd Decom-IA
-
-sleep 10
+sleep 5
 clear
+
+echo "ENTRANDO NA PASTA DO PROJETO..."
+echo "cd Decom-IA"
 
 echo "EDITAR O ARQUIVO chat.sh PARA CONFIGURAR SUA API KEY, URL E MODELO"
 
