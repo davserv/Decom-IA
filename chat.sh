@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 API_KEY="${CLOD_API_KEY:-API_KEY-AQUI}"
 API_URL="https://API_URL-AQUI"
