@@ -17,7 +17,9 @@ EOF
 
 git clone https://github.com/davserv/Decom-IA.git
 
-alias irpasta="cd /Decom-IA"
+sleep 2
+
+cd Decom-IA
 
 sleep 5
 clear
