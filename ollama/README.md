@@ -73,7 +73,7 @@ cd ollama/app
 ### ISTALAR FLASK
 
 ```bash
-pip install -r requirements.txt
+pip install flask flask-cors requests
 ```
 
 --------
