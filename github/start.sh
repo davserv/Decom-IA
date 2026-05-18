@@ -5,11 +5,10 @@ echo "Instalando..."
 
 git clone https://github.com/davserv/Decom-IA.git
 
-sleep 2
+sleep 1
 
 cd Decom-IA/github
 
-sleep 1
 clear
 
 cat << "EOF"
@@ -25,7 +24,9 @@ cat << "EOF"
 EOF
 
 echo "ENTRANDO NA PASTA DO PROJETO..."
+echo ""
 echo "'cd Decom-IA/github'"
+echo ""
 
 echo "EDITAR O ARQUIVO chat.sh PARA CONFIGURAR SUA API KEY, URL E MODELO"
 
