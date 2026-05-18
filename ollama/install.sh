@@ -3,17 +3,15 @@ set -e
 
 echo "Instalando..."
 
-curl -fsSL https://ollama.com/install.sh | sh
-
-ollama serve
-
-ollama run qwen3:1.7b
-
 git clone https://github.com/davserv/Decom-IA.git
 
 sleep 1
 
 cd Decom-IA/ollama
+
+curl -fsSL https://ollama.com/install.sh | sh
+
+ollama serve
 
 clear
 
@@ -29,6 +27,10 @@ cat << "EOF"
 
 EOF
 
+echo "INSTALANDO O MODELO QWEN3:1.7B..."
+echo ""
+echo "'ollama run qwen3:1.7b'"
+echo ""
 echo "ENTRANDO NA PASTA DO PROJETO..."
 echo ""
 echo "'cd Decom-IA/ollama'"
