@@ -24,7 +24,7 @@ cd Decom-IA/lmstudio
 curl -fsSL https://lmstudio.ai/install.sh | bash
 echo ""
 echo "REINICIE O SHELL OU EXECUTE O SEGUINTE COMANDO:
-export PATH="/home/LOCAL/.lmstudio/bin:$PATH""
+export PATH='/home/LOCAL/.lmstudio/bin:$PATH'"
 echo ""
 echo "EXECUTANDO O SERVIDOR LMSTUDIO..."
 echo ""
