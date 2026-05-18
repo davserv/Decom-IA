@@ -21,67 +21,7 @@ DECOM IA É UM AGENTE SIMPLES DE IA. APLICATIVO BY DEVELOPER DAVIDSONBPE...
 ### INSTALL - LINUX / MACOS / WSL2
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/davserv/Decom-IA/main/lmstudio/install.sh | bash
-```
---------
-
-### COMANDO DECOM IA
-
-```bash
-chmod +x chat.sh && ./chat.sh
-```
---------
-
-### INSTALE O LMSTUDIO
-
-```bash
-curl -fsSL https://lmstudio.ai/install.sh | bash
-```
---------
-
-### START LMSTUDIO 
-
-```bash
-lms server start
-lms server stop
-```
---------
-
-### LMSTUDIO LISTAR
-
-```bash
-lms ls
-```
---------
-
-### LMSTUDIO MODELS
-
-```bash
-lms chat google/gemma-3-1b
-```
---------
-
-### LMSTUDIO MODELS-S
-
-```bash
-lms chat google/gemma-3-1b -s "OLÁ"
-```
---------
-
-### EXCLUIR MODEL
-
-```bash
-find ~ -iname "*NOME-DO-MODEL*"
-```
---------
-
-### LMSTUDIO DOCS/CLI
-
-```bash
-https://lmstudio.ai/docs/cli
-```
-```bash
-https://lmstudio.ai/docs/cli/local-models/chat
+curl -fsSL https://raw.githubusercontent.com/davserv/Decom-IA/main/manus/install.sh | bash
 ```
 --------
 
@@ -90,40 +30,31 @@ https://lmstudio.ai/docs/cli/local-models/chat
 ```bash
 git clone https://github.com/davserv/Decom-IA.git
 ```
-
 --------
 
-### CD LOCAL PASTA
+### CD LOCAL PASTA 
 
 ```bash
-cd lmstudio/app
+cd manus
+```
+--------
+
+### COMANDO DECOM IA
+
+```bash
+chmod +x chat.sh && ./chat.sh
 ```
 
 --------
 
-### ISTALAR FLASK
-
-```bash
-pip install -r requirements.txt
-ou
-pip install flask requests
-```
---------
-
-### RODE SERVIDOR PYTHON
-
-```bash
-python app.py
-```
---------
 
 
 ### PROVEDOR DE IA GRATIS
 
-* [LM Studio](https://lmstudio.ai/) `Get API Key`
-
+* [Manus AI](https://manus.im/app#settings/integrations/api) `Get API Key`
 
 --------
+
 
 ### DOAR COM
 
