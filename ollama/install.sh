@@ -9,10 +9,6 @@ sleep 1
 
 cd Decom-IA/ollama
 
-curl -fsSL https://ollama.com/install.sh | sh
-
-ollama serve
-
 clear
 
 cat << "EOF"
@@ -27,6 +23,14 @@ cat << "EOF"
 
 EOF
 
+echo "ABRA UM NOVO TERMINAL PARA CONTINUAR A INSTALAÇÃO DO OLLAMA"
+echo ""
+echo "'curl -fsSL https://ollama.com/install.sh | sh'"
+echo ""
+echo "INICIANDO O SERVIDOR OLLAMA..."
+echo ""
+echo "'ollama serve'"
+echo ""
 echo "INSTALANDO O MODELO QWEN3:1.7B..."
 echo ""
 echo "'ollama run qwen3:1.7b'"
