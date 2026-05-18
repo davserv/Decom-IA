@@ -3,23 +3,24 @@ set -e
 
 echo "Instalando..."
 
-curl -fsSL https://lmstudio.ai/install.sh | bash
-
-echo "lmstudio instalado com sucesso!"
-
-lms server start
-
-echo "lmstudio servidor iniciado com sucesso!"
-
-lms chat google/gemma-3-1b
-
-echo "lmstudio gemma-3-1b instalado com sucesso!"
-
 git clone https://github.com/davserv/Decom-IA.git
 
 sleep 1
 
 cd Decom-IA/lmstudio
+
+curl -fsSL https://lmstudio.ai/install.sh | bash
+
+echo "REINICIE O SHELL OU EXECUTE O SEGUINTE COMANDO:
+export PATH="/home/LOCAL/.lmstudio/bin:$PATH""
+
+echo "EXECUTANDO O SERVIDOR LMSTUDIO..."
+
+echo "'lms server start'"
+
+echo "INSTALANDO O MODELO GEMMA-3-1B..."
+
+echo "'lms chat google/gemma-3-1b'"
 
 clear
 
