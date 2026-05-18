@@ -1,8 +1,10 @@
 #!/bin/bash
 
 API_KEY="${OLLAMA_API_KEY:-API_KEY-AQUI}"
-API_URL="https://ollama.com/api/chat"
-MODEL="glm-4.7:cloud"
+# API_URL="https://ollama.com/api/chat"
+# MODEL="glm-4.7:cloud"
+API_URL="http://localhost:11434/api/chat"
+MODEL="qwen3:1.7b"
 
 clear
 
