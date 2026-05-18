@@ -28,7 +28,7 @@ git clone https://github.com/davserv/Decom-IA.git
 ### CD LOCAL PASTA 
 
 ```bash
-cd gemini
+cd github
 ```
 --------
 
@@ -44,7 +44,7 @@ chmod +x chat.sh && ./chat.sh
 
 ### PROVEDOR DE IA GRATIS
 
-* [Google AI Studio](https://aistudio.google.com/app/api-keys) `Get API Key`
+* [GitHub Tokens](https://github.com/settings/tokens/new) `Get API Key`
 
 --------
 

@@ -7,7 +7,7 @@ DECOM IA É UM AGENTE SIMPLES DE IA. APLICATIVO BY DEVELOPER DAVIDSONBPE...
 ----------
 
 
-| [HOME](https://davserv.github.io/Decom-IA/) | [WINDOWS](https://davserv.github.io/Decom-IA/wind/) | [OLLAMA](https://davserv.github.io/Decom-IA/ollama/) | [GEMINI](https://davserv.github.io/Decom-IA/gemini/) | [LMSTUDIO](https://davserv.github.io/Decom-IA/lmstudio/) | [CLINE](https://davserv.github.io/Decom-IA/cline/) |
+| [HOME](https://davserv.github.io/Decom-IA/) | [WINDOWS](https://davserv.github.io/Decom-IA/wind/) | [OLLAMA](https://davserv.github.io/Decom-IA/ollama/) | [GEMINI](https://davserv.github.io/Decom-IA/gemini/) | [LMSTUDIO](https://davserv.github.io/Decom-IA/lmstudio/) | [CLINE](https://davserv.github.io/Decom-IA/cline/) | [GITHUB](https://davserv.github.io/Decom-IA/github/) |
 
 
 ----------
@@ -89,7 +89,7 @@ git clone https://github.com/davserv/Decom-IA.git
 ### CD LOCAL PASTA
 
 ```bash
-cd /lmstudio/app
+cd lmstudio/app
 ```
 
 --------
