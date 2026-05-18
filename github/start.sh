@@ -3,6 +3,15 @@ set -e
 
 echo "Instalando..."
 
+git clone https://github.com/davserv/Decom-IA.git
+
+sleep 2
+
+cd Decom-IA/github
+
+sleep 1
+clear
+
 cat << "EOF"
 
 ████  █████  ███   ███  █   █    ███  ███  
@@ -14,15 +23,6 @@ cat << "EOF"
             ISTALLER DECOM IA
 
 EOF
-
-git clone https://github.com/davserv/Decom-IA.git
-
-sleep 2
-
-cd Decom-IA/github
-
-sleep 5
-clear
 
 echo "ENTRANDO NA PASTA DO PROJETO..."
 echo "'cd Decom-IA/github'"
