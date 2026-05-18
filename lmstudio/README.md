@@ -18,6 +18,13 @@ DECOM IA É UM AGENTE SIMPLES DE IA. APLICATIVO BY DEVELOPER DAVIDSONBPE...
 
 --------
 
+### INSTALL - LINUX / MACOS / WSL2
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/davserv/Decom-IA/main/lmstudio/install.sh | bash
+```
+--------
+
 ### COMANDO DECOM IA
 
 ```bash
