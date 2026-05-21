@@ -1,13 +1,9 @@
-﻿# ==========================================
-# DECOM IA TERMINAL CHAT - POWERSHELL EDITION
-# ==========================================
-
-# =========================
+﻿# =========================
 # CONFIG API
 # =========================
 $API_KEY = $env:CLOD_API_KEY
 
-if ([string]::IsNullOrEmpty($API_KEY)) {
+if ([string]::IsNullOrWhiteSpace($API_KEY)) {
     $API_KEY = "API_KEY_AQUI"
 }
 
@@ -15,14 +11,29 @@ $API_URL = "https://API_URL_AQUI"
 $MODEL   = "MODEL_AQUI"
 
 # =========================
-# UTF-8 / ACENTUAÇÃO
+# UTF-8
 # =========================
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 $OutputEncoding = [System.Text.Encoding]::UTF8
 chcp 65001 > $null
 
 # =========================
-# FUNÇÃO BANNER
+# MEMÓRIA DOS CHATS
+# =========================
+$Chats = @{}
+$CurrentChat = "principal"
+
+$SystemPrompt = "Você é um assistente inteligente estilo Decom IA no terminal."
+
+$Chats[$CurrentChat] = @(
+    @{
+        role    = "system"
+        content = $SystemPrompt
+    }
+)
+
+# =========================
+# BANNER
 # =========================
 function Show-Banner {
 
@@ -36,155 +47,164 @@ function Show-Banner {
     Write-Host "████  █████  ███   ███  █   █    ███ █   █" -ForegroundColor Green
 
     Write-Host ""
-    Write-Host "             TERMINAL AI CHAT" -ForegroundColor Cyan
+    Write-Host "     AI TERMINAL • STREAMING EDITION" -ForegroundColor Cyan
     Write-Host ""
 
     Write-Host "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" -ForegroundColor DarkCyan
+
     Write-Host "🤖 Modelo: " -NoNewline
     Write-Host "$MODEL" -ForegroundColor Yellow
 
-    Write-Host "💡 Comandos: " -NoNewline
-    Write-Host "sair | clear" -ForegroundColor White
+    Write-Host "💬 Chat Atual: " -NoNewline
+    Write-Host "$CurrentChat" -ForegroundColor Magenta
+
+    Write-Host ""
+    Write-Host "📌 Comandos:" -ForegroundColor White
+
+    Write-Host "  /new NOME      → novo chat"
+    Write-Host "  /switch NOME   → trocar chat"
+    Write-Host "  /list          → listar chats"
+    Write-Host "  /delete NOME   → deletar chat"
+    Write-Host "  /clear         → limpar"
+    Write-Host "  /exit          → sair"
 
     Write-Host "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" -ForegroundColor DarkCyan
     Write-Host ""
 }
 
 # =========================
-# ANIMAÇÃO IA
+# STREAM RESPONSE
 # =========================
-function Show-Thinking {
+function Start-StreamingResponse {
 
-    $frames = @(
-        "⠋ Pensando...",
-        "⠙ Pensando...",
-        "⠹ Pensando...",
-        "⠸ Pensando...",
-        "⠼ Pensando...",
-        "⠴ Pensando...",
-        "⠦ Pensando...",
-        "⠧ Pensando..."
+    param (
+        [string]$Prompt
     )
 
-    for ($i = 0; $i -lt 2; $i++) {
-        foreach ($frame in $frames) {
-            Write-Host "`r🤖 $frame " -ForegroundColor Cyan -NoNewline
-            Start-Sleep -Milliseconds 80
-        }
+    # ==========================================
+    # SALVAR USER
+    # ==========================================
+    $Chats[$CurrentChat] += @{
+        role    = "user"
+        content = $Prompt
     }
 
-    Write-Host "`r                            `r" -NoNewline
-}
-
-# =========================
-# INICIAR
-# =========================
-Show-Banner
-
-# =========================
-# LOOP PRINCIPAL
-# =========================
-while ($true) {
-
-    Write-Host ""
-    Write-Host "Você " -ForegroundColor Green -NoNewline
-    Write-Host "> " -ForegroundColor DarkGray -NoNewline
-
-    $PERGUNTA = Read-Host
-
-    # =========================
-    # COMANDOS
-    # =========================
-
-    if ($PERGUNTA.ToLower() -match "^(sair|exit)$") {
-
-        Write-Host ""
-        Write-Host "✅ Chat encerrado." -ForegroundColor Green
-        Write-Host ""
-        break
-    }
-
-    if ($PERGUNTA.ToLower() -match "^(clear|limpar)$") {
-        Show-Banner
-        continue
-    }
-
-    if ([string]::IsNullOrWhiteSpace($PERGUNTA)) {
-        continue
-    }
-
-    # =========================
-    # IA THINKING
-    # =========================
-    Show-Thinking
-
-    # =========================
+    # ==========================================
     # BODY JSON
-    # =========================
+    # ==========================================
     $body = @{
         model = $MODEL
 
-        messages = @(
-            @{
-                role    = "system"
-                content = "Você é um assistente inteligente estilo Decom IA no terminal."
-            },
-            @{
-                role    = "user"
-                content = $PERGUNTA
-            }
-        )
+        messages = $Chats[$CurrentChat]
 
         temperature = 0.7
-        max_completion_tokens = 6096
+        stream = $true
 
-    } | ConvertTo-Json -Depth 10
+        max_completion_tokens = 4096
 
-    # =========================
-    # REQUEST API
-    # =========================
+    } | ConvertTo-Json -Depth 100
+
     try {
 
-        $response = Invoke-RestMethod `
-            -Uri $API_URL `
-            -Method POST `
-            -Headers @{
-                "Authorization" = "Bearer $API_KEY"
-                "Content-Type"  = "application/json"
-            } `
-            -Body $body `
-            -ErrorAction Stop
+        # ==========================================
+        # REQUEST STREAM
+        # ==========================================
+        $request = [System.Net.HttpWebRequest]::Create($API_URL)
 
-        $RESPOSTA = $response.choices[0].message.content
+        $request.Method = "POST"
+        $request.ContentType = "application/json"
+        $request.Headers.Add("Authorization", "Bearer $API_KEY")
 
-        if ([string]::IsNullOrWhiteSpace($RESPOSTA)) {
+        $bytes = [System.Text.Encoding]::UTF8.GetBytes($body)
+        $request.ContentLength = $bytes.Length
 
-            Write-Host ""
-            Write-Host "❌ Resposta vazia da API." -ForegroundColor Red
-            continue
-        }
+        $requestStream = $request.GetRequestStream()
+        $requestStream.Write($bytes, 0, $bytes.Length)
+        $requestStream.Close()
 
-        # =========================
-        # RESPOSTA ESTILIZADA
-        # =========================
+        # ==========================================
+        # RESPONSE STREAM
+        # ==========================================
+        $response = $request.GetResponse()
+        $stream = $response.GetResponseStream()
+
+        $reader = New-Object System.IO.StreamReader($stream)
+
         Write-Host ""
         Write-Host "╭───────────────────────────────╮" -ForegroundColor Blue
-        Write-Host "│ Decom IA" -ForegroundColor Blue
+        Write-Host "│ 🤖 Decom IA" -ForegroundColor Blue
         Write-Host "╰───────────────────────────────╯" -ForegroundColor Blue
         Write-Host ""
 
-        Write-Host $RESPOSTA -ForegroundColor White
+        $fullResponse = ""
+
+        while (-not $reader.EndOfStream) {
+
+            $line = $reader.ReadLine()
+
+            if ([string]::IsNullOrWhiteSpace($line)) {
+                continue
+            }
+
+            # ==========================================
+            # OPENAI STREAM FORMAT
+            # data: {...}
+            # ==========================================
+            if ($line.StartsWith("data: ")) {
+
+                $jsonLine = $line.Substring(6)
+
+                if ($jsonLine -eq "[DONE]") {
+                    break
+                }
+
+                try {
+
+                    $json = $jsonLine | ConvertFrom-Json
+
+                    $token = $json.choices[0].delta.content
+
+                    if ($token) {
+
+                        $fullResponse += $token
+
+                        Write-Host $token `
+                            -ForegroundColor White `
+                            -NoNewline
+                    }
+
+                } catch {}
+            }
+        }
+
+        Write-Host ""
+        Write-Host ""
+
+        # ==========================================
+        # SALVAR RESPOSTA
+        # ==========================================
+        $Chats[$CurrentChat] += @{
+            role    = "assistant"
+            content = $fullResponse
+        }
+
+        $reader.Close()
+        $stream.Close()
+        $response.Close()
     }
 
     catch {
 
         Write-Host ""
-        Write-Host "❌ Erro ao obter resposta da API." -ForegroundColor Red
+        Write-Host "❌ Erro ao obter resposta." -ForegroundColor Red
         Write-Host ""
 
         if ($_.Exception.Response) {
 
-            $reader = New-Object System.IO.StreamReader($_.Exception.Response.GetResponseStream())
+            $reader = New-Object System.IO.StreamReader(
+                $_.Exception.Response.GetResponseStream()
+            )
+
             $errorResponse = $reader.ReadToEnd()
 
             Write-Host $errorResponse -ForegroundColor DarkGray
@@ -194,6 +214,174 @@ while ($true) {
             Write-Host $_.Exception.Message -ForegroundColor DarkGray
         }
     }
+}
+
+# =========================
+# START
+# =========================
+Show-Banner
+
+# =========================
+# LOOP
+# =========================
+while ($true) {
 
     Write-Host ""
+    Write-Host "[$CurrentChat]" `
+        -ForegroundColor Magenta `
+        -NoNewline
+
+    Write-Host " Você > " `
+        -ForegroundColor Green `
+        -NoNewline
+
+    $PERGUNTA = Read-Host
+
+    if ([string]::IsNullOrWhiteSpace($PERGUNTA)) {
+        continue
+    }
+
+    # ==========================================
+    # EXIT
+    # ==========================================
+    if ($PERGUNTA -match "^/(exit|sair)$") {
+
+        Write-Host ""
+        Write-Host "✅ Encerrando..." -ForegroundColor Green
+        break
+    }
+
+    # ==========================================
+    # CLEAR
+    # ==========================================
+    if ($PERGUNTA -match "^/(clear|limpar)$") {
+
+        Show-Banner
+        continue
+    }
+
+    # ==========================================
+    # LIST
+    # ==========================================
+    if ($PERGUNTA -match "^/list$") {
+
+        Write-Host ""
+        Write-Host "💬 Chats disponíveis:" -ForegroundColor Cyan
+
+        foreach ($chat in $Chats.Keys) {
+
+            if ($chat -eq $CurrentChat) {
+
+                Write-Host " • $chat (ATUAL)" `
+                    -ForegroundColor Green
+            }
+            else {
+
+                Write-Host " • $chat" `
+                    -ForegroundColor White
+            }
+        }
+
+        continue
+    }
+
+    # ==========================================
+    # NEW CHAT
+    # ==========================================
+    if ($PERGUNTA -match "^/new\s+(.+)$") {
+
+        $NovoChat = $Matches[1].Trim()
+
+        if ($Chats.ContainsKey($NovoChat)) {
+
+            Write-Host ""
+            Write-Host "⚠️ Esse chat já existe." `
+                -ForegroundColor Yellow
+
+            continue
+        }
+
+        $Chats[$NovoChat] = @(
+            @{
+                role    = "system"
+                content = $SystemPrompt
+            }
+        )
+
+        $CurrentChat = $NovoChat
+
+        Write-Host ""
+        Write-Host "✅ Novo chat criado: $NovoChat" `
+            -ForegroundColor Green
+
+        continue
+    }
+
+    # ==========================================
+    # SWITCH CHAT
+    # ==========================================
+    if ($PERGUNTA -match "^/switch\s+(.+)$") {
+
+        $TrocarChat = $Matches[1].Trim()
+
+        if (-not $Chats.ContainsKey($TrocarChat)) {
+
+            Write-Host ""
+            Write-Host "❌ Chat não encontrado." `
+                -ForegroundColor Red
+
+            continue
+        }
+
+        $CurrentChat = $TrocarChat
+
+        Write-Host ""
+        Write-Host "🔄 Mudado para: $CurrentChat" `
+            -ForegroundColor Cyan
+
+        continue
+    }
+
+    # ==========================================
+    # DELETE CHAT
+    # ==========================================
+    if ($PERGUNTA -match "^/delete\s+(.+)$") {
+
+        $DeleteChat = $Matches[1].Trim()
+
+        if ($DeleteChat -eq "principal") {
+
+            Write-Host ""
+            Write-Host "❌ Não pode deletar principal." `
+                -ForegroundColor Red
+
+            continue
+        }
+
+        if (-not $Chats.ContainsKey($DeleteChat)) {
+
+            Write-Host ""
+            Write-Host "❌ Chat não existe." `
+                -ForegroundColor Red
+
+            continue
+        }
+
+        $Chats.Remove($DeleteChat)
+
+        if ($CurrentChat -eq $DeleteChat) {
+            $CurrentChat = "principal"
+        }
+
+        Write-Host ""
+        Write-Host "🗑️ Chat deletado." `
+            -ForegroundColor Yellow
+
+        continue
+    }
+
+    # ==========================================
+    # START STREAM
+    # ==========================================
+    Start-StreamingResponse $PERGUNTA
 }
