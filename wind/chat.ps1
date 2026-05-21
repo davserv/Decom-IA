@@ -1,78 +1,199 @@
-$API_KEY = "API_KEY-AQUI"
-$API_URL = "https://API_URL-AQUI"
+﻿# ==========================================
+# DECOM IA TERMINAL CHAT - POWERSHELL EDITION
+# ==========================================
 
-$history = @()
+# =========================
+# CONFIG API
+# =========================
+$API_KEY = $env:CLOD_API_KEY
 
-function Show-User($msg) {
-    Write-Host ""
-    Write-Host "=) Voce:" -ForegroundColor Cyan
-    Write-Host "$msg" -ForegroundColor White
+if ([string]::IsNullOrEmpty($API_KEY)) {
+    $API_KEY = "API_KEY_AQUI"
 }
 
-function Show-Bot($msg) {
+$API_URL = "https://API_URL_AQUI"
+$MODEL   = "MODEL_AQUI"
+
+# =========================
+# UTF-8 / ACENTUAÇÃO
+# =========================
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+$OutputEncoding = [System.Text.Encoding]::UTF8
+chcp 65001 > $null
+
+# =========================
+# FUNÇÃO BANNER
+# =========================
+function Show-Banner {
+
+    Clear-Host
+
     Write-Host ""
-    Write-Host ":) DECOM IA:" -ForegroundColor Green
-    Write-Host "$msg" -ForegroundColor Gray
+    Write-Host "████  █████  ███   ███  █   █    ███  ███  " -ForegroundColor Green
+    Write-Host "█   █ █     █     █   █ ██ ██     █  █   █ " -ForegroundColor Green
+    Write-Host "█   █ ████  █     █   █ █ █ █     █  █████ " -ForegroundColor Green
+    Write-Host "█   █ █     █     █   █ █   █     █  █   █ " -ForegroundColor Green
+    Write-Host "████  █████  ███   ███  █   █    ███ █   █" -ForegroundColor Green
+
+    Write-Host ""
+    Write-Host "             TERMINAL AI CHAT" -ForegroundColor Cyan
+    Write-Host ""
+
+    Write-Host "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" -ForegroundColor DarkCyan
+    Write-Host "🤖 Modelo: " -NoNewline
+    Write-Host "$MODEL" -ForegroundColor Yellow
+
+    Write-Host "💡 Comandos: " -NoNewline
+    Write-Host "sair | clear" -ForegroundColor White
+
+    Write-Host "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" -ForegroundColor DarkCyan
     Write-Host ""
 }
 
-Clear-Host
+# =========================
+# ANIMAÇÃO IA
+# =========================
+function Show-Thinking {
 
-Write-Host "===========================================" -ForegroundColor DarkGray
-Write-Host "
-####  #####  ###   ###  #   #    ###  ###  
-#   # #     #     #   # ## ##     #  #   # 
-#   # ####  #     #   # # # #     #  ##### 
-#   # #     #     #   # #   #     #  #   # 
-####  #####  ###   ###  #   #    ### #   #    
-" -ForegroundColor DarkYellow
-Write-Host "===========================================" -ForegroundColor DarkGray
-Write-Host "Digite 'sair' para encerrar" -ForegroundColor Yellow
-Write-Host ""
+    $frames = @(
+        "⠋ Pensando...",
+        "⠙ Pensando...",
+        "⠹ Pensando...",
+        "⠸ Pensando...",
+        "⠼ Pensando...",
+        "⠴ Pensando...",
+        "⠦ Pensando...",
+        "⠧ Pensando..."
+    )
 
+    for ($i = 0; $i -lt 2; $i++) {
+        foreach ($frame in $frames) {
+            Write-Host "`r🤖 $frame " -ForegroundColor Cyan -NoNewline
+            Start-Sleep -Milliseconds 80
+        }
+    }
+
+    Write-Host "`r                            `r" -NoNewline
+}
+
+# =========================
+# INICIAR
+# =========================
+Show-Banner
+
+# =========================
+# LOOP PRINCIPAL
+# =========================
 while ($true) {
-    $PERGUNTA = Read-Host ">>"
 
-    if ($PERGUNTA -match "^(sair|exit)$") {
-        Write-Host "? Encerrando..." -ForegroundColor Red
+    Write-Host ""
+    Write-Host "Você " -ForegroundColor Green -NoNewline
+    Write-Host "> " -ForegroundColor DarkGray -NoNewline
+
+    $PERGUNTA = Read-Host
+
+    # =========================
+    # COMANDOS
+    # =========================
+
+    if ($PERGUNTA.ToLower() -match "^(sair|exit)$") {
+
+        Write-Host ""
+        Write-Host "✅ Chat encerrado." -ForegroundColor Green
+        Write-Host ""
         break
+    }
+
+    if ($PERGUNTA.ToLower() -match "^(clear|limpar)$") {
+        Show-Banner
+        continue
     }
 
     if ([string]::IsNullOrWhiteSpace($PERGUNTA)) {
         continue
     }
 
-    Show-User $PERGUNTA
+    # =========================
+    # IA THINKING
+    # =========================
+    Show-Thinking
 
-    $history += @{ role = "user"; content = $PERGUNTA }
-
+    # =========================
+    # BODY JSON
+    # =========================
     $body = @{
-        model = "--MODEL-AQUI--"
+        model = $MODEL
+
         messages = @(
-            @{ role = "system"; content = "Você é um assistente estilo ChatGPT." }
-        ) + $history
+            @{
+                role    = "system"
+                content = "Você é um assistente inteligente estilo Decom IA no terminal."
+            },
+            @{
+                role    = "user"
+                content = $PERGUNTA
+            }
+        )
+
         temperature = 0.7
-        max_completion_tokens = 2048
+        max_completion_tokens = 6096
+
     } | ConvertTo-Json -Depth 10
 
+    # =========================
+    # REQUEST API
+    # =========================
     try {
-        Write-Host "Pensando..." -ForegroundColor DarkYellow
 
-        $response = Invoke-RestMethod -Uri $API_URL `
-            -Method Post `
+        $response = Invoke-RestMethod `
+            -Uri $API_URL `
+            -Method POST `
             -Headers @{
-                Authorization = "Bearer $API_KEY"
-                "Content-Type" = "application/json"
+                "Authorization" = "Bearer $API_KEY"
+                "Content-Type"  = "application/json"
             } `
-            -Body $body
+            -Body $body `
+            -ErrorAction Stop
 
-        $resposta = $response.choices[0].message.content
+        $RESPOSTA = $response.choices[0].message.content
 
-        $history += @{ role = "assistant"; content = $resposta }
+        if ([string]::IsNullOrWhiteSpace($RESPOSTA)) {
 
-        Show-Bot $resposta
+            Write-Host ""
+            Write-Host "❌ Resposta vazia da API." -ForegroundColor Red
+            continue
+        }
+
+        # =========================
+        # RESPOSTA ESTILIZADA
+        # =========================
+        Write-Host ""
+        Write-Host "╭───────────────────────────────╮" -ForegroundColor Blue
+        Write-Host "│ Decom IA" -ForegroundColor Blue
+        Write-Host "╰───────────────────────────────╯" -ForegroundColor Blue
+        Write-Host ""
+
+        Write-Host $RESPOSTA -ForegroundColor White
     }
+
     catch {
-        Write-Host "? Erro na API" -ForegroundColor Red
+
+        Write-Host ""
+        Write-Host "❌ Erro ao obter resposta da API." -ForegroundColor Red
+        Write-Host ""
+
+        if ($_.Exception.Response) {
+
+            $reader = New-Object System.IO.StreamReader($_.Exception.Response.GetResponseStream())
+            $errorResponse = $reader.ReadToEnd()
+
+            Write-Host $errorResponse -ForegroundColor DarkGray
+        }
+        else {
+
+            Write-Host $_.Exception.Message -ForegroundColor DarkGray
+        }
     }
+
+    Write-Host ""
 }
