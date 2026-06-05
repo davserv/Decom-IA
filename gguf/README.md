@@ -1,3 +1,4 @@
+
 <img src="https://raw.githubusercontent.com/davserv/Decom-IA/refs/heads/main/icon.png" min-width="150px" max-width="150px" width="150px" align="right" alt="">
 
 # DECOM IA | É UM AGENTE SIMPLES DE IA QUE RODA NO SEU TERMINAL.
@@ -18,54 +19,71 @@ DECOM IA É UM AGENTE SIMPLES DE IA. APLICATIVO BY DEVELOPER DAVIDSONBPE...
 
 --------
 
-### GIT CLONE 
+
+## instalação rápido llama.cpp
+
+1. Baixar llama.cpp (supondo Linux/Mac)
 
 ```bash
-git clone https://github.com/davserv/Decom-IA.git
+git clone https://github.com/ggerganov/llama.cpp
+cd llama.cpp
 ```
---------
 
-### COMANDO DECOM IA
+2. Baixar um modelo GGUF, ex: LFM2 quantizado
+
+```bash
+wget https://huggingface.co/LiquidAI/LFM2-350M-GGUF/resolve/main/LFM2-350M-Q4_0.gguf
+```
+
+Se você estiver no Windows, pode baixar os binários prontos do llama.cpp e executar o `llama-server.exe` da mesma forma.
+
+
+## ✅ Compilando o `llama-server` com CMake
+
+Dentro da pasta `~/workspace/llama.cpp`, siga estes passos:
+
+### 1. Instale dependências (se necessário)
+No Ubuntu/Debian:
+```bash
+sudo apt update
+sudo apt install cmake build-essential
+```
+
+### 2. Crie uma pasta de build e configure o CMake
+```bash
+mkdir -p build
+cd build
+cmake .. -DBUILD_SHARED_LIBS=OFF
+```
+Isso prepara a compilação **apenas com CPU**. Se você tiver uma GPU NVIDIA e quiser aceleração CUDA, adicione `-DGGML_CUDA=ON` ao comando `cmake`. Mas como você está usando um modelo minúsculo (350M), a CPU sozinha é mais que suficiente.
+
+### 3. Compile o servidor
+```bash
+cmake --build . --config Release --target llama-server -j$(nproc)
+```
+Aguarde alguns minutos. O executável `llama-server` será gerado dentro de `build/bin/`.
+
+### 4. Copie o executável para a pasta do modelo (ou use caminho completo)
+```bash
+cp bin/llama-server ..
+cd ..
+```
+
+Agora execute o servidor, **sem o `-ngl`** (que força uso de GPU; para CPU, remova ou use `-ngl 0`):
+```bash
+./llama-server -m LFM2-350M-Q4_0.gguf -c 4096 --host 0.0.0.0 --port 8080
+```
+
+O servidor iniciará e mostrará uma URL. A API estará em `http://localhost:8080/v1/chat/completions`.
+
+---
+
+## 📌 Abra um novo terminal execute este comando.
+
 
 ```bash
 chmod +x chat.sh && ./chat.sh
 ```
---------
-
-### PROVEDORES DE IA GRATIS
-
-* [OpenRouter](https://openrouter.ai/) `Get API Key`
-
-* [Clod.io](https://clod.io/) `Get API Key`
-
-* [HuggingFace](https://huggingface.co/models) `Get API Key`
-
-* [Google AI Studio](https://aistudio.google.com/app/api-keys) `Get API Key`
-
-* [Build.Nvidia](https://build.nvidia.com/) `Get API Key`
-
-* [Zen OpenCode](https://opencode.ai/auth) `Get API Key`
-
-* [ollama](https://ollama.com/settings/keys) `Get API Key`
-
-* [LM Studio](https://lmstudio.ai/) `Get API Key`
-
-* [Groq](https://console.groq.com/keys) `Get API Key`
-
-* [Fireworks](https://app.fireworks.ai/) `Get API Key`
-
-* [DInference](https://panel.dinference.com/keys) `Get API Key`
-
-* [Kilo.AI](https://app.kilo.ai/) `Get API Key`
-
-* [G0I.AI](https://g0i.ai/) `Get API Key`
-
---------
-
-
-### VIDEO
-
-[![Decom-IA](https://raw.githubusercontent.com/davserv/Decom-IA/refs/heads/main/decom-ia.gif)](https://github.com/davserv/Decom-IA/)
 
 --------
 
@@ -81,7 +99,7 @@ chmod +x chat.sh && ./chat.sh
 
 [<img height="30" src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="davidsonbpe | YouTube" />][youtube]
 [<img height="30" src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="davidsonbpe | Instagram" />][instagram]
-[<img height="30" src="https://img.shields.io/badge/CodePen-003333?style=for-the-badge&logo=CodePen&logoColor=white" alt="davidsonbpe | CodePen" />][CodePen]
+[<img height="30" src="https://img.shields.io/badge/CodePen-003333?style=for-the-badge&logo=codesandbox&logoColor=white" alt="davidsonbpe | CodePen" />][CodePen]
 [<img height="30" src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="davidsonbpe | Facebook" />][facebook]
 <a href="mailto:dev7.capital366@passinbox.com" alt="Email">
 <img height="30" src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=Minutemailer&logoColor=white" /></a>
@@ -96,7 +114,7 @@ chmod +x chat.sh && ./chat.sh
 <br />
 
 
-<img src="https://devanalytics.vercel.app/p/m8voKzwna" min-width="1px" max-width="1px" width="1px">
+<img src="https://img.shields.io/badge/20-1877F2?style=for-the-badge&logo=sharp&logoColor=white" width="50px">
 
 [youtube]: https://www.youtube.com/channel/UCHqvw9v2Fp6o006lUskoigg/
 [instagram]: https://www.instagram.com/davidsonbpe/
