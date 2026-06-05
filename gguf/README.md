@@ -34,8 +34,18 @@ cd llama.cpp
 ```bash
 wget https://huggingface.co/LiquidAI/LFM2-350M-GGUF/resolve/main/LFM2-350M-Q4_0.gguf
 ```
+------
 
-Se você estiver no Windows, pode baixar os binários prontos do llama.cpp e executar o `llama-server.exe` da mesma forma.
+Se você estiver no Windows, pode baixar os binários prontos do llamafile e executar o `llamafile.exe` dentro da mesma pasta.
+
+```bash
+https://github.com/mozilla-ai/llamafile/releases
+```
+
+```bash
+.\llamafile-0.10.3.ex e --server --model LFM2-350M-Q4_0.gguf
+```
+------
 
 
 ## ✅ Compilando o `llama-server` com CMake
