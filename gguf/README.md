@@ -43,7 +43,7 @@ https://github.com/mozilla-ai/llamafile/releases
 ```
 
 ```bash
-.\llamafile-0.10.3.ex e --server --model LFM2-350M-Q4_0.gguf
+.\llamafile.exe --server --model LFM2-350M-Q4_0.gguf
 ```
 ------
 
