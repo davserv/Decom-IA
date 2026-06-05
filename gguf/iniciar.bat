@@ -1,0 +1,1 @@
+.\llamafile.exe --server --model LFM2-350M-Q4_0.gguf

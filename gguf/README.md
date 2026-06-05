@@ -20,7 +20,7 @@ DECOM IA É UM AGENTE SIMPLES DE IA. APLICATIVO BY DEVELOPER DAVIDSONBPE...
 --------
 
 
-## instalação rápido llama.cpp
+## instalação rápido llama.cpp em GGUF
 
 1. Baixar llama.cpp (supondo Linux/Mac)
 
@@ -36,6 +36,8 @@ wget https://huggingface.co/LiquidAI/LFM2-350M-GGUF/resolve/main/LFM2-350M-Q4_0.
 ```
 ------
 
+## Instalação Windows
+
 Se você estiver no Windows, pode baixar os binários prontos do llamafile e executar o `llamafile.exe` dentro da mesma pasta.
 
 ```bash
@@ -45,7 +47,13 @@ https://github.com/mozilla-ai/llamafile/releases
 ```bash
 .\llamafile.exe --server --model LFM2-350M-Q4_0.gguf
 ```
-------
+--------
+
+### IMG ILUSTRATIVA WINDOWS
+
+[![Decom-IA](wind.jpg)](https://github.com/davserv/Decom-IA/)
+
+--------
 
 
 ## ✅ Compilando o `llama-server` com CMake
@@ -94,6 +102,11 @@ O servidor iniciará e mostrará uma URL. A API estará em `http://localhost:808
 ```bash
 chmod +x chat.sh && ./chat.sh
 ```
+--------
+
+### IMG ILUSTRATIVA LINUX
+
+[![Decom-IA](linux.jpg)](https://github.com/davserv/Decom-IA/)
 
 --------
 
