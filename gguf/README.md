@@ -102,6 +102,7 @@ O servidor iniciará e mostrará uma URL. A API estará em `http://localhost:808
 ```bash
 curl -fsSL https://raw.githubusercontent.com/davserv/Decom-IA/main/gguf/install.sh | bash
 ```
+### Autere o modelo para o que vc baixou...
 -------
 
 ## 📌 execute este comando.
