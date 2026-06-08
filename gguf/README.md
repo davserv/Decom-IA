@@ -94,10 +94,17 @@ Agora execute o servidor, **sem o `-ngl`** (que força uso de GPU; para CPU, rem
 
 O servidor iniciará e mostrará uma URL. A API estará em `http://localhost:8080/v1/chat/completions`.
 
----
+------
 
-## 📌 Abra um novo terminal execute este comando.
 
+## Abra um novo terminal e instale o chat.sh
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/davserv/Decom-IA/main/gguf/install.sh | bash
+```
+-------
+
+## 📌 execute este comando.
 
 ```bash
 chmod +x chat.sh && ./chat.sh
