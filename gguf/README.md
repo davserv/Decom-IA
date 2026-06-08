@@ -92,7 +92,7 @@ Agora execute o servidor, **sem o `-ngl`** (que força uso de GPU; para CPU, rem
 ./llama-server -m LFM2-350M-Q4_0.gguf -c 4096 --host 0.0.0.0 --port 8080
 ```
 
-O servidor iniciará e mostrará uma URL. A API estará em `http://localhost:8080/v1/chat/completions`.
+O servidor iniciará e mostrará uma URL. A API estará em `http://localhost:8080/` ou api `http://localhost:8080/v1/chat/completions`.
 
 ------
 
