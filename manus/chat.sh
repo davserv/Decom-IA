@@ -32,6 +32,7 @@ EOF
 
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${WHITE}🤖 Modelo:${NC} MANUS AI${NC}"
+echo -e "${WHITE}🌐 API:${NC} ${GRAY}MANUS${NC}"
 echo -e "${WHITE}💡 Comandos:${NC} sair | clear"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""

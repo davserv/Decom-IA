@@ -30,7 +30,8 @@ echo "
 echo -e "${NC}"
 
 echo -e "${GREEN}✅ Conectado ao modelo:${NC} ${YELLOW}$MODEL${NC}"
-echo -e "${GRAY}Digite 'sair' para encerrar${NC}"
+echo -e "${WHITE}🌐 API:${NC} ${GRAY}GGuf${NC}"
+echo -e "${GRAY}💡 Digite 'sair' para encerrar${NC}"
 echo ""
 
 # HISTÓRICO

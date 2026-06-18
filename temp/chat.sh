@@ -12,6 +12,7 @@ echo "
 "
 
 echo "🚀 Iniciando Chat..."
+echo  "🌐 API: Multiplas IA "
 echo "💡 Digite 'sair' para encerrar"
 echo ""
 

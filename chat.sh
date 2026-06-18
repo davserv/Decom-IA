@@ -1,9 +1,20 @@
 #!/bin/bash
 
-API_KEY="${CLOD_API_KEY:-API_KEY-AQUI}"
-API_URL="https://API_URL-AQUI"
+options=(
+    "MultIA"
+    "Ollama"
+    "Gemini"
+    "LMstudio"
+    "Cline"
+    "GitHub"
+    "Cerebras"
+    "Manus"
+    "GGuf"
+    "Funcionalidade"
+    "Sair"
+)
 
-MODEL="MODEL-AQUI"
+selected=0
 
 # =========================
 # CORES
@@ -17,14 +28,8 @@ WHITE='\033[1;37m'
 GRAY='\033[0;90m'
 NC='\033[0m'
 
-# =========================
-# LIMPAR TELA
-# =========================
+draw_menu() {
 clear
-
-# =========================
-# BANNER ESTILO Decom IA
-# =========================
 echo -e "${GREEN}"
 cat << "EOF"
 
@@ -34,75 +39,102 @@ cat << "EOF"
 █   █ █     █     █   █ █   █     █  █   █ 
 ████  █████  ███   ███  █   █    ███ █   █
 
-             TERMINAL AI CHAT
-
+         MENU PRINCIPAL AI CHAT
 EOF
-
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${WHITE}🤖 Modelo:${NC} ${YELLOW}$MODEL${NC}"
-echo -e "${WHITE}💡 Comandos:${NC} sair | clear"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo ""
+echo -e "${YELLOW}      ANTES DE SELECIONAR EDITA SH ${NC} "
+echo
+    for i in "${!options[@]}"; do
+        if [ "$i" -eq "$selected" ]; then
+            echo "➜ ${options[$i]}"
+        else
+            echo "  ${options[$i]}"
+        fi
+    done
+    echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+}
 
-# =========================
-# LOOP CHAT
-# =========================
 while true; do
+    draw_menu
 
-    # Prompt estilo ChatGPT
-    echo -ne "${GREEN}Você${NC} ${GRAY}> ${NC}"
-    read -r PERGUNTA
+    read -rsn1 key
 
-    # Sair
-    [[ "${PERGUNTA,,}" =~ ^(sair|exit)$ ]] && \
-    echo -e "\n${GREEN}✅ Chat encerrado.${NC}\n" && break
+    if [[ $key == $'\x1b' ]]; then
+        read -rsn2 key
 
-    # Limpar tela
-    [[ "${PERGUNTA,,}" =~ ^(clear|limpar)$ ]] && clear && continue
+        case $key in
+            "[A")
+                ((selected--))
+                [ $selected -lt 0 ] && selected=$((${#options[@]} - 1))
+                ;;
+            "[B")
+                ((selected++))
+                [ $selected -ge ${#options[@]} ] && selected=0
+                ;;
+        esac
 
-    # Ignora vazio
-    [ -z "$PERGUNTA" ] && continue
-
-    echo ""
-    echo -e "${CYAN}🤖 IA está pensando...${NC}"
-    echo ""
-
-    # Requisição API
-    RESPONSE=$(curl -s -X POST "$API_URL" \
-      -H "Authorization: Bearer $API_KEY" \
-      -H "Content-Type: application/json" \
-      -d "{
-        \"model\": \"$MODEL\",
-        \"messages\": [
-          {
-            \"role\": \"system\",
-            \"content\": \"Você é um assistente inteligente estilo Decom IA no terminal.\"
-          },
-          {
-            \"role\": \"user\",
-            \"content\": \"$PERGUNTA\"
-          }
-        ],
-        \"temperature\": 0.7,
-        \"max_completion_tokens\": 6096
-      }")
-
-    # Captura resposta
-    RESPOSTA=$(echo "$RESPONSE" | jq -r '.choices[0].message.content // empty')
-
-    # Erro
-    if [ -z "$RESPOSTA" ]; then
-        echo -e "${RED}❌ Erro ao obter resposta.${NC}"
-        echo -e "${GRAY}$RESPONSE${NC}"
-        echo ""
-        continue
+    elif [[ $key == "" ]]; then
+        break
     fi
-
-    # Mostrar resposta
-    echo -e "${BLUE}╭───────────────────────────────╮${NC}"
-    echo -e "${BLUE}│${NC} ${WHITE}Decom IA${NC}"
-    echo -e "${BLUE}╰───────────────────────────────╯${NC}"
-
-    echo -e "${WHITE}$RESPOSTA${NC}"
-    echo ""
 done
+
+clear
+
+case "${options[$selected]}" in
+
+    "MultIA")
+        echo "Executando MultIA..."
+        chmod +x ./multia/chat.sh && ./multia/chat.sh
+        ;;
+
+    "Ollama")
+        echo "Executando Ollama..."
+        chmod +x ./ollama/chat.sh && ./ollama/chat.sh
+        ;;
+
+    "Gemini")
+        echo "Executando Gemini..."
+        chmod +x ./gemini/chat.sh && ./gemini/chat.sh
+        ;;
+
+    "LMstudio")
+        echo "Executando LMstudio..."
+        chmod +x ./lmstudio/chat.sh && ./lmstudio/chat.sh
+        ;;
+
+    "Cline")
+        echo "Executando Cline..."
+        chmod +x ./cline/chat.sh && ./cline/chat.sh
+        ;;
+
+    "GitHub")
+        echo "Executando GitHub..."
+        chmod +x ./github/chat.sh && ./github/chat.sh
+        ;;
+
+    "Cerebras")
+        echo "Executando Cerebras..."
+        chmod +x ./cerebras/chat.sh && ./cerebras/chat.sh
+        ;;
+
+    "Manus")
+        echo "Executando Manus..."
+        chmod +x ./manus/chat.sh && ./manus/chat.sh
+        ;;
+
+    "GGuf")
+        echo "Executando GGuf..."
+        chmod +x ./gguf/chat.sh && ./gguf/chat.sh
+        ;;
+
+    "Funcionalidade")
+        echo "Funcionalidade..."
+        echo ""
+        echo "https://github.com/davserv/Decom-IA"
+        echo ""
+        ;;
+
+    "Sair")
+        exit 0
+        ;;
+esac
