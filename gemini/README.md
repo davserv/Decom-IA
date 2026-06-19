@@ -7,7 +7,7 @@ DECOM IA É UM AGENTE SIMPLES DE IA. APLICATIVO BY DEVELOPER DAVIDSONBPE...
 ----------
 
 
-| [HOME](https://davserv.github.io/Decom-IA/) | [WINDOWS](https://davserv.github.io/Decom-IA/wind/) | [OLLAMA](https://davserv.github.io/Decom-IA/ollama/) | [GEMINI](https://davserv.github.io/Decom-IA/gemini/) | [LMSTUDIO](https://davserv.github.io/Decom-IA/lmstudio/) | [CLINE](https://davserv.github.io/Decom-IA/cline/) | [GITHUB](https://davserv.github.io/Decom-IA/github/) | [CEREBRAS](https://davserv.github.io/Decom-IA/cerebras/) | [MANUS](https://davserv.github.io/Decom-IA/manus/) | [GGUF](https://davserv.github.io/Decom-IA/gguf/) |
+| [HOME](https://davserv.github.io/Decom-IA/) | [WINDOWS](https://davserv.github.io/Decom-IA/wind/) | [MULT.IA](https://davserv.github.io/Decom-IA/multia/) | [OLLAMA](https://davserv.github.io/Decom-IA/ollama/) | [GEMINI](https://davserv.github.io/Decom-IA/gemini/) | [LMSTUDIO](https://davserv.github.io/Decom-IA/lmstudio/) | [CLINE](https://davserv.github.io/Decom-IA/cline/) | [GITHUB](https://davserv.github.io/Decom-IA/github/) | [CEREBRAS](https://davserv.github.io/Decom-IA/cerebras/) | [MANUS](https://davserv.github.io/Decom-IA/manus/) | [GGUF](https://davserv.github.io/Decom-IA/gguf/) |
 
 
 ----------

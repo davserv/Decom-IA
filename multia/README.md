@@ -7,10 +7,23 @@ DECOM IA É UM AGENTE SIMPLES DE IA. APLICATIVO BY DEVELOPER DAVIDSONBPE...
 ----------
 
 
-| [HOME](https://davserv.github.io/Decom-IA/) | [WINDOWS](https://davserv.github.io/Decom-IA/wind/) | [OLLAMA](https://davserv.github.io/Decom-IA/ollama/) | [GEMINI](https://davserv.github.io/Decom-IA/gemini/) | [LMSTUDIO](https://davserv.github.io/Decom-IA/lmstudio/) | [CLINE](https://davserv.github.io/Decom-IA/cline/) | [GITHUB](https://davserv.github.io/Decom-IA/github/) | [CEREBRAS](https://davserv.github.io/Decom-IA/cerebras/) | [MANUS](https://davserv.github.io/Decom-IA/manus/) |
+| [HOME](https://davserv.github.io/Decom-IA/) | [WINDOWS](https://davserv.github.io/Decom-IA/wind/) | [MULT.IA](https://davserv.github.io/Decom-IA/multia/) | [OLLAMA](https://davserv.github.io/Decom-IA/ollama/) | [GEMINI](https://davserv.github.io/Decom-IA/gemini/) | [LMSTUDIO](https://davserv.github.io/Decom-IA/lmstudio/) | [CLINE](https://davserv.github.io/Decom-IA/cline/) | [GITHUB](https://davserv.github.io/Decom-IA/github/) | [CEREBRAS](https://davserv.github.io/Decom-IA/cerebras/) | [MANUS](https://davserv.github.io/Decom-IA/manus/) | [GGUF](https://davserv.github.io/Decom-IA/gguf/) |
 
 
 ----------
+
+### RODAR NO CODESPACES 
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/davserv/Decom-IA?quickstart=1)
+
+--------
+
+### INSTALL - LINUX / MACOS / WSL2
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/davserv/Decom-IA/main/multia/install.sh | bash
+```
+--------
 
 ### GIT CLONE 
 
@@ -19,22 +32,26 @@ git clone https://github.com/davserv/Decom-IA.git
 ```
 --------
 
-### CD LOCAL PASTA 
+### DIRETORIO DA PASTA
 
 ```bash
-cd \Decom-IA\wind>
+cd Decom-IA/multia
+```
+--------
+
+### COMANDO INSTALL
+
+```bash
+chmod +x install.sh && ./install.sh
 ```
 --------
 
 ### COMANDO DECOM IA
 
 ```bash
-start start.bat
+chmod +x chat.sh && ./chat.sh
 ```
-
 --------
-
-
 
 ### PROVEDORES DE IA GRATIS
 
@@ -67,15 +84,15 @@ start start.bat
 --------
 
 
-### IMG ILUSTRATIVA
+### VIDEO
 
-[![Decom-IA](wind.jpg)](https://github.com/davserv/Decom-IA/)
+[![Decom-IA](https://raw.githubusercontent.com/davserv/Decom-IA/refs/heads/main/decom-ia.gif)](https://github.com/davserv/Decom-IA/)
 
 --------
 
 ### DOAR COM
 
-[![DOAR COM](https://img.shields.io/badge/PagBank-1bb99a?style=for-the-badge&logo=PagBank&logoColor=white)](https://pag.ae/7Y3uUnhg8)
+[![DOAR COM](https://img.shields.io/badge/DOAR%20COM-PagBank-blue.svg?logo=pagseguro&style=for-the-badge&logoColor=f5f5f5)](https://pag.ae/7Y3uUnhg8)
 
 --------
 
@@ -100,7 +117,7 @@ start start.bat
 <br />
 
 
-<img src="https://devanalytics.vercel.app/p/m8voKzwna" min-width="1px" max-width="1px" width="1px">
+<img src="https://raw.githubusercontent.com/davserv/d-framework/refs/heads/img-iso/count.svg" min-width="1px" max-width="1px" width="1px">
 
 [youtube]: https://www.youtube.com/channel/UCHqvw9v2Fp6o006lUskoigg/
 [instagram]: https://www.instagram.com/davidsonbpe/
