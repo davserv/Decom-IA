@@ -25,14 +25,15 @@ DECOM IA É UM AGENTE SIMPLES DE IA. APLICATIVO BY DEVELOPER DAVIDSONBPE...
 1. Baixar llama.cpp (supondo Linux/Mac)
 
 ```bash
-git clone https://github.com/ggerganov/llama.cpp
+git clone https://github.com/ggml-org/llama.cpp
 cd llama.cpp
 ```
 
-2. Baixar um modelo GGUF, ex: LFM2 quantizado
+2. Baixar um modelo GGUF, ex: LFM2 ou QWEN2 quantizado
 
 ```bash
 wget https://huggingface.co/LiquidAI/LFM2-350M-GGUF/resolve/main/LFM2-350M-Q4_0.gguf
+wget https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/resolve/main/qwen2.5-0.5b-instruct-q2_k.gguf
 ```
 ------
 

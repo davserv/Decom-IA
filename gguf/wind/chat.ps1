@@ -1,6 +1,6 @@
 ﻿
-$API_URL = "http://localhost:8080/v1/chat/completions"
-$MODEL   = "LFM2-350M-Q4_0.gguf"
+$API_URL = "http://127.0.0.1:8080/v1/chat/completions"
+$MODEL   = "model-server.gguf"
 $API_KEY = ""
 
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
