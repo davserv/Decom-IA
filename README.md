@@ -35,7 +35,7 @@ chmod +x chat.sh && ./chat.sh
 ### PROVEDORES DE IA GRATIS
 
 <details>
-<summary><img src="https://cdn.simpleicons.org/openrouter/6C47FF" alt="" width="18" height="18"> <b>OpenRouter</b></summary>
+<summary><img src="https://cdn.simpleicons.org/openrouter/76B900" alt="" width="18" height="18"> <b>OpenRouter</b></summary>
 
 ### Get a key at [openrouter.ai](https://openrouter.ai/keys).
 
@@ -50,7 +50,7 @@ MODEL="model-aqui"
 --------
 
 <details>
-<summary><img src="https://cdn.simpleicons.org/codio/6C47FF" alt="" width="18" height="18"> <b>Clod.io</b></summary>
+<summary><img src="https://cdn.simpleicons.org/codio/76B900" alt="" width="18" height="18"> <b>Clod.io</b></summary>
 
 ### Get a key at [clod.io](https://clod.io/).
 
@@ -64,7 +64,7 @@ MODEL="model-aqui"
 --------
 
 <details>
-<summary><img src="https://cdn.simpleicons.org/huggingface/6C47FF" alt="" width="18" height="18"> <b>HuggingFace</b></summary>
+<summary><img src="https://cdn.simpleicons.org/huggingface/76B900" alt="" width="18" height="18"> <b>HuggingFace</b></summary>
 
 ### Get a key at [huggingface.co](https://huggingface.co/models).
 
@@ -78,7 +78,7 @@ MODEL="model-aqui"
 --------
 
 <details>
-<summary><img src="https://cdn.simpleicons.org/googleassistant/6C47FF" alt="" width="18" height="18"> <b>Google AI Studio</b></summary>
+<summary><img src="https://cdn.simpleicons.org/googleassistant/76B900" alt="" width="18" height="18"> <b>Google AI Studio</b></summary>
 
 ### Get a key at [aistudio.google.com](https://aistudio.google.com/app/api-keys).
 
@@ -92,7 +92,7 @@ MODEL="model-aqui"
 --------
 
 <details>
-<summary><img src="https://cdn.simpleicons.org/nvidia/6C47FF" alt="" width="18" height="18"> <b>Build.Nvidia</b></summary>
+<summary><img src="https://cdn.simpleicons.org/nvidia/76B900" alt="" width="18" height="18"> <b>Build.Nvidia</b></summary>
 
 ### Get a key at [build.nvidia.com](https://build.nvidia.com/).
 
@@ -106,7 +106,7 @@ MODEL="model-aqui"
 --------
 
 <details>
-<summary><img src="https://cdn.simpleicons.org/opencode/6C47FF" alt="" width="18" height="18"> <b>Zen OpenCode</b></summary>
+<summary><img src="https://cdn.simpleicons.org/opencode/76B900" alt="" width="18" height="18"> <b>Zen OpenCode</b></summary>
 
 ### Get a key at [opencode.ai](https://opencode.ai/auth).
 
@@ -120,7 +120,7 @@ MODEL="model-aqui"
 --------
 
 <details>
-<summary><img src="https://cdn.simpleicons.org/ollama/6C47FF" alt="" width="18" height="18"> <b>ollama</b></summary>
+<summary><img src="https://cdn.simpleicons.org/ollama/76B900" alt="" width="18" height="18"> <b>ollama</b></summary>
 
 ### Get a key at [ollama.com](https://ollama.com/settings/keys).
 
@@ -135,7 +135,7 @@ MODEL="model-aqui"
 --------
 
 <details>
-<summary><img src="https://cdn.simpleicons.org/lmstudio/6C47FF" alt="" width="18" height="18"> <b>LM Studio</b></summary>
+<summary><img src="https://cdn.simpleicons.org/lmstudio/76B900" alt="" width="18" height="18"> <b>LM Studio</b></summary>
 
 ### Get a key at [lmstudio.ai](https://lmstudio.ai/).
 
@@ -149,7 +149,7 @@ MODEL="model-aqui"
 --------
 
 <details>
-<summary><img src="https://cdn.simpleicons.org/ollama/6C47FF" alt="" width="18" height="18"> <b>llamafile</b></summary>
+<summary><img src="https://cdn.simpleicons.org/ollama/76B900" alt="" width="18" height="18"> <b>llamafile</b></summary>
 
 ### Get a key at [llamafile.git](https://github.com/mozilla-ai/llamafile).
 
@@ -163,7 +163,7 @@ MODEL="model-aqui"
 --------
 
 <details>
-<summary><img src="https://cdn.simpleicons.org/grocy/6C47FF" alt="" width="18" height="18"> <b>Groq</b></summary>
+<summary><img src="https://cdn.simpleicons.org/grocy/76B900" alt="" width="18" height="18"> <b>Groq</b></summary>
 
 ### Get a key at [console.groq.com](https://console.groq.com/keys).
 
@@ -177,7 +177,7 @@ MODEL="model-aqui"
 --------
 
 <details>
-<summary><img src="https://cdn.simpleicons.org/fireship/6C47FF" alt="" width="18" height="18"> <b>Fireworks</b></summary>
+<summary><img src="https://cdn.simpleicons.org/fireship/76B900" alt="" width="18" height="18"> <b>Fireworks</b></summary>
 
 ### Get a key at [app.fireworks.ai](https://app.fireworks.ai/).
 
@@ -191,7 +191,7 @@ MODEL="model-aqui"
 --------
 
 <details>
-<summary><img src="https://cdn.simpleicons.org/dash/6C47FF" alt="" width="18" height="18"> <b>DInference</b></summary>
+<summary><img src="https://cdn.simpleicons.org/dash/76B900" alt="" width="18" height="18"> <b>DInference</b></summary>
 
 ### Get a key at [dinference.com](https://panel.dinference.com/keys).
 
@@ -205,7 +205,7 @@ MODEL="model-aqui"
 --------
 
 <details>
-<summary><img src="https://cdn.simpleicons.org/wikibooks/6C47FF" alt="" width="18" height="18"> <b>Kilo.AI</b></summary>
+<summary><img src="https://cdn.simpleicons.org/wikibooks/76B900" alt="" width="18" height="18"> <b>Kilo.AI</b></summary>
 
 ### Get a key at [app.kilo.ai](https://app.kilo.ai/).
 
@@ -219,7 +219,7 @@ MODEL="model-aqui"
 --------
 
 <details>
-<summary><img src="https://cdn.simpleicons.org/codacy/6C47FF" alt="" width="18" height="18"> <b>AskCodi</b></summary>
+<summary><img src="https://cdn.simpleicons.org/codacy/76B900" alt="" width="18" height="18"> <b>AskCodi</b></summary>
 
 ### Get a key at [askcodi.com](https://askcodi.com/onboarding).
 
@@ -233,7 +233,7 @@ MODEL="model-aqui"
 --------
 
 <details>
-<summary><img src="https://cdn.simpleicons.org/celery/6C47FF" alt="" width="18" height="18"> <b>Cerebras</b></summary>
+<summary><img src="https://cdn.simpleicons.org/celery/76B900" alt="" width="18" height="18"> <b>Cerebras</b></summary>
 
 ### Get a key at [cloud.cerebras.ai](https://cloud.cerebras.ai/).
 
@@ -247,7 +247,7 @@ MODEL="model-aqui"
 --------
 
 <details>
-<summary><img src="https://cdn.simpleicons.org/griddotai/6C47FF" alt="" width="18" height="18"> <b>G0I.AI</b></summary>
+<summary><img src="https://cdn.simpleicons.org/griddotai/76B900" alt="" width="18" height="18"> <b>G0I.AI</b></summary>
 
 ### `Get API Key` [g0i.ai](https://g0i.ai/).
 
@@ -261,7 +261,7 @@ MODEL="model-aqui"
 --------
 
 <details>
-<summary><img src="https://cdn.simpleicons.org/ollama/6C47FF" alt="" width="18" height="18"> <b>llama.cpp</b></summary>
+<summary><img src="https://cdn.simpleicons.org/ollama/76B900" alt="" width="18" height="18"> <b>llama.cpp</b></summary>
 
 ### Get a key at [llama.cpp.git](https://github.com/ggml-org/llama.cpp).
 
@@ -275,7 +275,7 @@ MODEL="model-aqui"
 --------
 
 <details>
-<summary><img src="https://cdn.simpleicons.org/cline/6C47FF" alt="" width="18" height="18"> <b>Cline.bot</b></summary>
+<summary><img src="https://cdn.simpleicons.org/cline/76B900" alt="" width="18" height="18"> <b>Cline.bot</b></summary>
 
 ### Get a key at [app.cline.bot](https://app.cline.bot/).
 
@@ -289,7 +289,7 @@ MODEL="model-aqui"
 --------
 
 <details>
-<summary><img src="https://cdn.simpleicons.org/github/6C47FF" alt="" width="18" height="18"> <b>GitHub Tokens</b></summary>
+<summary><img src="https://cdn.simpleicons.org/github/76B900" alt="" width="18" height="18"> <b>GitHub Tokens</b></summary>
 
 ### Get a key at [github.com](https://github.com/settings/tokens/new).
 
@@ -302,7 +302,7 @@ MODEL="model-aqui"
 
 --------
 <details>
-<summary><img src="https://cdn.simpleicons.org/metaai/6C47FF" alt="" width="18" height="18"> <b>Manus AI</b></summary>
+<summary><img src="https://cdn.simpleicons.org/metaai/76B900" alt="" width="18" height="18"> <b>Manus AI</b></summary>
 
 ### Get a key at [manus.im](https://manus.im/app#settings/integrations/api).
 
