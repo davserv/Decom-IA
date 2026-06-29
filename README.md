@@ -37,15 +37,13 @@ chmod +x chat.sh && ./chat.sh
 <details>
 <summary><img src="https://cdn.simpleicons.org/openrouter/6C47FF" alt="" width="18" height="18"> <b>OpenRouter</b></summary>
 
-Get a key at [openrouter.ai](https://openrouter.ai/keys).
+### Get a key at [openrouter.ai](https://openrouter.ai/keys).
 
 ```bash
 API_KEY="api-key-aqui"
 API_URL="https://openrouter.ai/api/v1/chat/completions"
 MODEL="model-aqui"
 ```
-
-Browse [all models](https://openrouter.ai/models) or [free models](https://openrouter.ai/collections/free-models).
 
 </details>
 
@@ -54,7 +52,7 @@ Browse [all models](https://openrouter.ai/models) or [free models](https://openr
 <details>
 <summary><img src="https://cdn.simpleicons.org/codio/6C47FF" alt="" width="18" height="18"> <b>Clod.io</b></summary>
 
-Get a key at [clod.io](https://clod.io/).
+### Get a key at [clod.io](https://clod.io/).
 
 ```bash
 API_KEY="api-key-aqui"
@@ -68,7 +66,7 @@ MODEL="model-aqui"
 <details>
 <summary><img src="https://cdn.simpleicons.org/huggingface/6C47FF" alt="" width="18" height="18"> <b>HuggingFace</b></summary>
 
-Get a key at [huggingface.co](https://huggingface.co/models).
+### Get a key at [huggingface.co](https://huggingface.co/models).
 
 ```bash
 API_KEY="api-key-aqui"
@@ -82,7 +80,7 @@ MODEL="model-aqui"
 <details>
 <summary><img src="https://cdn.simpleicons.org/googleassistant/6C47FF" alt="" width="18" height="18"> <b>Google AI Studio</b></summary>
 
-Get a key at [aistudio.google.com](https://aistudio.google.com/app/api-keys).
+### Get a key at [aistudio.google.com](https://aistudio.google.com/app/api-keys).
 
 ```bash
 API_KEY="api-key-aqui"
@@ -96,7 +94,7 @@ MODEL="model-aqui"
 <details>
 <summary><img src="https://cdn.simpleicons.org/nvidia/6C47FF" alt="" width="18" height="18"> <b>Build.Nvidia</b></summary>
 
-Get a key at [build.nvidia.com](https://build.nvidia.com/).
+### Get a key at [build.nvidia.com](https://build.nvidia.com/).
 
 ```bash
 API_KEY="api-key-aqui"
@@ -110,7 +108,7 @@ MODEL="model-aqui"
 <details>
 <summary><img src="https://cdn.simpleicons.org/opencode/6C47FF" alt="" width="18" height="18"> <b>Zen OpenCode</b></summary>
 
-Get a key at [opencode.ai](https://opencode.ai/auth).
+### Get a key at [opencode.ai](https://opencode.ai/auth).
 
 ```bash
 API_KEY="api-key-aqui"
@@ -124,7 +122,7 @@ MODEL="model-aqui"
 <details>
 <summary><img src="https://cdn.simpleicons.org/ollama/6C47FF" alt="" width="18" height="18"> <b>ollama</b></summary>
 
-Get a key at [ollama.com](https://ollama.com/settings/keys).
+### Get a key at [ollama.com](https://ollama.com/settings/keys).
 
 ```bash
 API_KEY="api-key-aqui"
@@ -139,7 +137,7 @@ MODEL="model-aqui"
 <details>
 <summary><img src="https://cdn.simpleicons.org/lmstudio/6C47FF" alt="" width="18" height="18"> <b>LM Studio</b></summary>
 
-Get a key at [lmstudio.ai](https://lmstudio.ai/).
+### Get a key at [lmstudio.ai](https://lmstudio.ai/).
 
 ```bash
 API_KEY="api-key-aqui"
@@ -153,7 +151,7 @@ MODEL="model-aqui"
 <details>
 <summary><img src="https://cdn.simpleicons.org/ollama/6C47FF" alt="" width="18" height="18"> <b>llamafile</b></summary>
 
-Get a key at [llamafile.git](https://github.com/mozilla-ai/llamafile).
+### Get a key at [llamafile.git](https://github.com/mozilla-ai/llamafile).
 
 ```bash
 API_KEY="api-key-aqui"
@@ -167,7 +165,7 @@ MODEL="model-aqui"
 <details>
 <summary><img src="https://cdn.simpleicons.org/grocy/6C47FF" alt="" width="18" height="18"> <b>Groq</b></summary>
 
-Get a key at [console.groq.com](https://console.groq.com/keys).
+### Get a key at [console.groq.com](https://console.groq.com/keys).
 
 ```bash
 API_KEY="api-key-aqui"
@@ -181,7 +179,7 @@ MODEL="model-aqui"
 <details>
 <summary><img src="https://cdn.simpleicons.org/fireship/6C47FF" alt="" width="18" height="18"> <b>Fireworks</b></summary>
 
-Get a key at [app.fireworks.ai](https://app.fireworks.ai/).
+### Get a key at [app.fireworks.ai](https://app.fireworks.ai/).
 
 ```bash
 API_KEY="api-key-aqui"
@@ -195,7 +193,7 @@ MODEL="model-aqui"
 <details>
 <summary><img src="https://cdn.simpleicons.org/dash/6C47FF" alt="" width="18" height="18"> <b>DInference</b></summary>
 
-Get a key at [dinference.com](https://panel.dinference.com/keys).
+### Get a key at [dinference.com](https://panel.dinference.com/keys).
 
 ```bash
 API_KEY="api-key-aqui"
@@ -209,7 +207,7 @@ MODEL="model-aqui"
 <details>
 <summary><img src="https://cdn.simpleicons.org/wikibooks/6C47FF" alt="" width="18" height="18"> <b>Kilo.AI</b></summary>
 
-Get a key at [app.kilo.ai](https://app.kilo.ai/).
+### Get a key at [app.kilo.ai](https://app.kilo.ai/).
 
 ```bash
 API_KEY="api-key-aqui"
@@ -223,7 +221,7 @@ MODEL="model-aqui"
 <details>
 <summary><img src="https://cdn.simpleicons.org/codacy/6C47FF" alt="" width="18" height="18"> <b>AskCodi</b></summary>
 
-Get a key at [askcodi.com](https://askcodi.com/onboarding).
+### Get a key at [askcodi.com](https://askcodi.com/onboarding).
 
 ```bash
 API_KEY="api-key-aqui"
@@ -237,7 +235,7 @@ MODEL="model-aqui"
 <details>
 <summary><img src="https://cdn.simpleicons.org/celery/6C47FF" alt="" width="18" height="18"> <b>Cerebras</b></summary>
 
-Get a key at [cloud.cerebras.ai](https://cloud.cerebras.ai/).
+### Get a key at [cloud.cerebras.ai](https://cloud.cerebras.ai/).
 
 ```bash
 API_KEY="api-key-aqui"
@@ -251,7 +249,7 @@ MODEL="model-aqui"
 <details>
 <summary><img src="https://cdn.simpleicons.org/griddotai/6C47FF" alt="" width="18" height="18"> <b>G0I.AI</b></summary>
 
-`Get API Key` [g0i.ai](https://g0i.ai/).
+### `Get API Key` [g0i.ai](https://g0i.ai/).
 
 ```bash
 API_KEY="api-key-aqui"
@@ -265,7 +263,7 @@ MODEL="model-aqui"
 <details>
 <summary><img src="https://cdn.simpleicons.org/ollama/6C47FF" alt="" width="18" height="18"> <b>llama.cpp</b></summary>
 
-Get a key at [llama.cpp.git](https://github.com/ggml-org/llama.cpp).
+### Get a key at [llama.cpp.git](https://github.com/ggml-org/llama.cpp).
 
 ```bash
 API_KEY="api-key-aqui"
@@ -279,7 +277,7 @@ MODEL="model-aqui"
 <details>
 <summary><img src="https://cdn.simpleicons.org/cline/6C47FF" alt="" width="18" height="18"> <b>Cline.bot</b></summary>
 
-Get a key at [app.cline.bot](https://app.cline.bot/).
+### Get a key at [app.cline.bot](https://app.cline.bot/).
 
 ```bash
 API_KEY="api-key-aqui"
@@ -293,7 +291,7 @@ MODEL="model-aqui"
 <details>
 <summary><img src="https://cdn.simpleicons.org/github/6C47FF" alt="" width="18" height="18"> <b>GitHub Tokens</b></summary>
 
-Get a key at [github.com](https://github.com/settings/tokens/new).
+### Get a key at [github.com](https://github.com/settings/tokens/new).
 
 ```bash
 API_KEY="api-key-aqui"
@@ -306,7 +304,7 @@ MODEL="model-aqui"
 <details>
 <summary><img src="https://cdn.simpleicons.org/metaai/6C47FF" alt="" width="18" height="18"> <b>Manus AI</b></summary>
 
-Get a key at [manus.im](https://manus.im/app#settings/integrations/api).
+### Get a key at [manus.im](https://manus.im/app#settings/integrations/api).
 
 ```bash
 API_KEY="api-key-aqui"
