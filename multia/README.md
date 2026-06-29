@@ -48,31 +48,283 @@ chmod +x chat.sh && ./chat.sh
 
 ### PROVEDORES DE IA GRATIS
 
-* [OpenRouter](https://openrouter.ai/) `Get API Key`
+<details>
+<summary><img src="https://cdn.simpleicons.org/openrouter/76B900" alt="" width="18" height="18"> <b>OpenRouter</b></summary>
 
-* [Clod.io](https://clod.io/) `Get API Key`
+### Get a key at [openrouter.ai](https://openrouter.ai/keys).
 
-* [HuggingFace](https://huggingface.co/models) `Get API Key`
+```bash
+API_KEY="api-key-aqui"
+API_URL="https://openrouter.ai/api/v1/chat/completions"
+MODEL="model-aqui"
+```
 
-* [Google AI Studio](https://aistudio.google.com/app/api-keys) `Get API Key`
+</details>
 
-* [Build.Nvidia](https://build.nvidia.com/) `Get API Key`
+--------
 
-* [Zen OpenCode](https://opencode.ai/auth) `Get API Key`
+<details>
+<summary><img src="https://cdn.simpleicons.org/codio/76B900" alt="" width="18" height="18"> <b>Clod.io</b></summary>
 
-* [ollama](https://ollama.com/settings/keys) `Get API Key`
+### Get a key at [clod.io](https://clod.io/).
 
-* [LM Studio](https://lmstudio.ai/) `Get API Key`
+```bash
+API_KEY="api-key-aqui"
+API_URL="https://api.clod.io/v1/chat/completions"
+MODEL="model-aqui"
+```
+</details>
 
-* [Groq](https://console.groq.com/keys) `Get API Key`
+--------
 
-* [Fireworks](https://app.fireworks.ai/) `Get API Key`
+<details>
+<summary><img src="https://cdn.simpleicons.org/huggingface/76B900" alt="" width="18" height="18"> <b>HuggingFace</b></summary>
 
-* [DInference](https://panel.dinference.com/keys) `Get API Key`
+### Get a key at [huggingface.co](https://huggingface.co/models).
 
-* [Kilo.AI](https://app.kilo.ai/) `Get API Key`
+```bash
+API_KEY="api-key-aqui"
+API_URL="https://router.huggingface.co/v1/chat/completions"
+MODEL="model-aqui"
+```
+</details>
 
-* [G0I.AI](https://g0i.ai/) `Get API Key`
+--------
+
+<details>
+<summary><img src="https://cdn.simpleicons.org/googleassistant/76B900" alt="" width="18" height="18"> <b>Google AI Studio</b></summary>
+
+### Get a key at [aistudio.google.com](https://aistudio.google.com/app/api-keys).
+
+```bash
+API_KEY="api-key-aqui"
+API_URL="https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent"
+MODEL="model-aqui"
+```
+</details>
+
+--------
+
+<details>
+<summary><img src="https://cdn.simpleicons.org/nvidia/76B900" alt="" width="18" height="18"> <b>Build.Nvidia</b></summary>
+
+### Get a key at [build.nvidia.com](https://build.nvidia.com/).
+
+```bash
+API_KEY="api-key-aqui"
+API_URL="https://integrate.api.nvidia.com/v1/chat/completions"
+MODEL="model-aqui"
+```
+</details>
+
+--------
+
+<details>
+<summary><img src="https://cdn.simpleicons.org/opencode/76B900" alt="" width="18" height="18"> <b>Zen OpenCode</b></summary>
+
+### Get a key at [opencode.ai](https://opencode.ai/auth).
+
+```bash
+API_KEY="api-key-aqui"
+API_URL="https://opencode.ai/zen/v1/chat/completions"
+MODEL="model-aqui"
+```
+</details>
+
+--------
+
+<details>
+<summary><img src="https://cdn.simpleicons.org/ollama/76B900" alt="" width="18" height="18"> <b>ollama</b></summary>
+
+### Get a key at [ollama.com](https://ollama.com/settings/keys).
+
+```bash
+API_KEY="api-key-aqui"
+API_URL="https://ollama.com/api/chat"
+API_URL="http://localhost:11434/api/chat"
+MODEL="model-aqui"
+```
+</details>
+
+--------
+
+<details>
+<summary><img src="https://cdn.simpleicons.org/lmstudio/76B900" alt="" width="18" height="18"> <b>LM Studio</b></summary>
+
+### Get a key at [lmstudio.ai](https://lmstudio.ai/).
+
+```bash
+API_KEY="api-key-aqui"
+API_URL="http://localhost:1234/api/v1/chat"
+MODEL="model-aqui"
+```
+</details>
+
+--------
+
+<details>
+<summary><img src="https://cdn.simpleicons.org/ollama/76B900" alt="" width="18" height="18"> <b>llamafile</b></summary>
+
+### Get a key at [llamafile.git](https://github.com/mozilla-ai/llamafile).
+
+```bash
+API_KEY="api-key-aqui"
+API_URL="http://localhost:8080/v1/chat/completions"
+MODEL="model-aqui"
+```
+</details>
+
+--------
+
+<details>
+<summary><img src="https://cdn.simpleicons.org/grocy/76B900" alt="" width="18" height="18"> <b>Groq</b></summary>
+
+### Get a key at [console.groq.com](https://console.groq.com/keys).
+
+```bash
+API_KEY="api-key-aqui"
+API_URL="https://api.groq.com/openai/v1/chat/completions"
+MODEL="model-aqui"
+```
+</details>
+
+--------
+
+<details>
+<summary><img src="https://cdn.simpleicons.org/fireship/76B900" alt="" width="18" height="18"> <b>Fireworks</b></summary>
+
+### Get a key at [app.fireworks.ai](https://app.fireworks.ai/).
+
+```bash
+API_KEY="api-key-aqui"
+API_URL="https://api.fireworks.ai/inference/v1/chat/completions"
+MODEL="model-aqui"
+```
+</details>
+
+--------
+
+<details>
+<summary><img src="https://cdn.simpleicons.org/dash/76B900" alt="" width="18" height="18"> <b>DInference</b></summary>
+
+### Get a key at [dinference.com](https://panel.dinference.com/keys).
+
+```bash
+API_KEY="api-key-aqui"
+API_URL="https://api.dinference.com/v1/chat/completions"
+MODEL="model-aqui"
+```
+</details>
+
+--------
+
+<details>
+<summary><img src="https://cdn.simpleicons.org/wikibooks/76B900" alt="" width="18" height="18"> <b>Kilo.AI</b></summary>
+
+### Get a key at [app.kilo.ai](https://app.kilo.ai/).
+
+```bash
+API_KEY="api-key-aqui"
+API_URL="https://api.kilo.ai/api/gateway/chat/completions"
+MODEL="model-aqui"
+```
+</details>
+
+--------
+
+<details>
+<summary><img src="https://cdn.simpleicons.org/codacy/76B900" alt="" width="18" height="18"> <b>AskCodi</b></summary>
+
+### Get a key at [askcodi.com](https://askcodi.com/onboarding).
+
+```bash
+API_KEY="api-key-aqui"
+API_URL="https://api.askcodi.com/v1/chat/completions"
+MODEL="model-aqui"
+```
+</details>
+
+--------
+
+<details>
+<summary><img src="https://cdn.simpleicons.org/celery/76B900" alt="" width="18" height="18"> <b>Cerebras</b></summary>
+
+### Get a key at [cloud.cerebras.ai](https://cloud.cerebras.ai/).
+
+```bash
+API_KEY="api-key-aqui"
+API_URL="https://api.cerebras.ai/v1/chat/completions"
+MODEL="model-aqui"
+```
+</details>
+
+--------
+
+<details>
+<summary><img src="https://cdn.simpleicons.org/griddotai/76B900" alt="" width="18" height="18"> <b>G0I.AI</b></summary>
+
+### `Get API Key` [g0i.ai](https://g0i.ai/).
+
+```bash
+API_KEY="api-key-aqui"
+API_URL="https://g0i.ai/v1/chat/completions"
+MODEL="model-aqui"
+```
+</details>
+
+--------
+
+<details>
+<summary><img src="https://cdn.simpleicons.org/ollama/76B900" alt="" width="18" height="18"> <b>llama.cpp</b></summary>
+
+### Get a key at [llama.cpp.git](https://github.com/ggml-org/llama.cpp).
+
+```bash
+API_KEY="api-key-aqui"
+API_URL="http://localhost:8080/v1/chat/completions"
+MODEL="model-aqui"
+```
+</details>
+
+--------
+
+<details>
+<summary><img src="https://cdn.simpleicons.org/cline/76B900" alt="" width="18" height="18"> <b>Cline.bot</b></summary>
+
+### Get a key at [app.cline.bot](https://app.cline.bot/).
+
+```bash
+API_KEY="api-key-aqui"
+API_URL="https://api.cline.bot/api/v1/chat/completions"
+MODEL="model-aqui"
+```
+</details>
+
+--------
+
+<details>
+<summary><img src="https://cdn.simpleicons.org/github/76B900" alt="" width="18" height="18"> <b>GitHub Tokens</b></summary>
+
+### Get a key at [github.com](https://github.com/settings/tokens/new).
+
+```bash
+API_KEY="api-key-aqui"
+API_URL="https://models.github.ai/inference"
+MODEL="model-aqui"
+```
+</details>
+
+--------
+<details>
+<summary><img src="https://cdn.simpleicons.org/metaai/76B900" alt="" width="18" height="18"> <b>Manus AI</b></summary>
+
+### Get a key at [manus.im](https://manus.im/app#settings/integrations/api).
+
+```bash
+API_KEY="api-key-aqui"
+API_URL="https://api.manus.ai/v2/task.create"
+```
+</details>
 
 --------
 
