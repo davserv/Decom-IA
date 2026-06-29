@@ -37,13 +37,11 @@ chmod +x chat.sh && ./chat.sh
 <details>
 <summary><img src="https://cdn.simpleicons.org/openrouter/76B900" alt="" width="18" height="18"> <b>OpenRouter</b></summary>
 
-### Get a key at [openrouter.ai](https://openrouter.ai/keys).
+### Get a key at https://openrouter.ai/keys
 
-```bash
-API_KEY="api-key-aqui"
-API_URL="https://openrouter.ai/api/v1/chat/completions"
-MODEL="model-aqui"
-```
+#### API_KEY='api-key-aqui'
+#### API_URL='https://openrouter.ai/api/v1/chat/completions'
+#### MODEL='model-aqui'
 
 </details>
 
