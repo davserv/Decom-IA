@@ -39,7 +39,7 @@ chmod +x chat.sh && ./chat.sh
 
 Get a key at [openrouter.ai](https://openrouter.ai/keys).
 
-```dotenv
+```bash
 API_KEY="api-key-aqui"
 API_URL="https://openrouter.ai/api/v1/chat/completions"
 MODEL="model-aqui"
@@ -56,7 +56,7 @@ Browse [all models](https://openrouter.ai/models) or [free models](https://openr
 
 Get a key at [clod.io](https://clod.io/).
 
-```dotenv
+```bash
 API_KEY="api-key-aqui"
 API_URL="https://api.clod.io/v1/chat/completions"
 MODEL="model-aqui"
@@ -70,7 +70,7 @@ MODEL="model-aqui"
 
 Get a key at [huggingface.co](https://huggingface.co/models).
 
-```dotenv
+```bash
 API_KEY="api-key-aqui"
 API_URL="https://router.huggingface.co/v1/chat/completions"
 MODEL="model-aqui"
@@ -84,7 +84,7 @@ MODEL="model-aqui"
 
 Get a key at [aistudio.google.com](https://aistudio.google.com/app/api-keys).
 
-```dotenv
+```bash
 API_KEY="api-key-aqui"
 API_URL="https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent"
 MODEL="model-aqui"
@@ -98,7 +98,7 @@ MODEL="model-aqui"
 
 Get a key at [build.nvidia.com](https://build.nvidia.com/).
 
-```dotenv
+```bash
 API_KEY="api-key-aqui"
 API_URL="https://integrate.api.nvidia.com/v1/chat/completions"
 MODEL="model-aqui"
@@ -112,7 +112,7 @@ MODEL="model-aqui"
 
 Get a key at [opencode.ai](https://opencode.ai/auth).
 
-```dotenv
+```bash
 API_KEY="api-key-aqui"
 API_URL="https://opencode.ai/zen/v1/chat/completions"
 MODEL="model-aqui"
@@ -126,7 +126,7 @@ MODEL="model-aqui"
 
 Get a key at [ollama.com](https://ollama.com/settings/keys).
 
-```dotenv
+```bash
 API_KEY="api-key-aqui"
 API_URL="https://ollama.com/api/chat"
 API_URL="http://localhost:11434/api/chat"
@@ -141,7 +141,7 @@ MODEL="model-aqui"
 
 Get a key at [lmstudio.ai](https://lmstudio.ai/).
 
-```dotenv
+```bash
 API_KEY="api-key-aqui"
 API_URL="http://localhost:1234/api/v1/chat"
 MODEL="model-aqui"
@@ -155,7 +155,7 @@ MODEL="model-aqui"
 
 Get a key at [llamafile.git](https://github.com/mozilla-ai/llamafile).
 
-```dotenv
+```bash
 API_KEY="api-key-aqui"
 API_URL="http://localhost:8080/v1/chat/completions"
 MODEL="model-aqui"
@@ -169,7 +169,7 @@ MODEL="model-aqui"
 
 Get a key at [console.groq.com](https://console.groq.com/keys).
 
-```dotenv
+```bash
 API_KEY="api-key-aqui"
 API_URL="https://api.groq.com/openai/v1/chat/completions"
 MODEL="model-aqui"
@@ -183,7 +183,7 @@ MODEL="model-aqui"
 
 Get a key at [app.fireworks.ai](https://app.fireworks.ai/).
 
-```dotenv
+```bash
 API_KEY="api-key-aqui"
 API_URL="https://api.fireworks.ai/inference/v1/chat/completions"
 MODEL="model-aqui"
@@ -197,7 +197,7 @@ MODEL="model-aqui"
 
 Get a key at [dinference.com](https://panel.dinference.com/keys).
 
-```dotenv
+```bash
 API_KEY="api-key-aqui"
 API_URL="https://api.dinference.com/v1/chat/completions"
 MODEL="model-aqui"
@@ -211,7 +211,7 @@ MODEL="model-aqui"
 
 Get a key at [app.kilo.ai](https://app.kilo.ai/).
 
-```dotenv
+```bash
 API_KEY="api-key-aqui"
 API_URL="https://api.kilo.ai/api/gateway/chat/completions"
 MODEL="model-aqui"
@@ -225,7 +225,7 @@ MODEL="model-aqui"
 
 Get a key at [askcodi.com](https://askcodi.com/onboarding).
 
-```dotenv
+```bash
 API_KEY="api-key-aqui"
 API_URL="https://api.askcodi.com/v1/chat/completions"
 MODEL="model-aqui"
@@ -239,7 +239,7 @@ MODEL="model-aqui"
 
 Get a key at [cloud.cerebras.ai](https://cloud.cerebras.ai/).
 
-```dotenv
+```bash
 API_KEY="api-key-aqui"
 API_URL="https://api.cerebras.ai/v1/chat/completions"
 MODEL="model-aqui"
@@ -253,7 +253,7 @@ MODEL="model-aqui"
 
 `Get API Key` [g0i.ai](https://g0i.ai/).
 
-```dotenv
+```bash
 API_KEY="api-key-aqui"
 API_URL="https://g0i.ai/v1/chat/completions"
 MODEL="model-aqui"
@@ -267,7 +267,7 @@ MODEL="model-aqui"
 
 Get a key at [llama.cpp.git](https://github.com/ggml-org/llama.cpp).
 
-```dotenv
+```bash
 API_KEY="api-key-aqui"
 API_URL="http://localhost:8080/v1/chat/completions"
 MODEL="model-aqui"
@@ -281,7 +281,7 @@ MODEL="model-aqui"
 
 Get a key at [app.cline.bot](https://app.cline.bot/).
 
-```dotenv
+```bash
 API_KEY="api-key-aqui"
 API_URL="https://api.cline.bot/api/v1/chat/completions"
 MODEL="model-aqui"
@@ -295,7 +295,7 @@ MODEL="model-aqui"
 
 Get a key at [github.com](https://github.com/settings/tokens/new).
 
-```dotenv
+```bash
 API_KEY="api-key-aqui"
 API_URL="https://models.github.ai/inference"
 MODEL="model-aqui"
@@ -308,7 +308,7 @@ MODEL="model-aqui"
 
 Get a key at [manus.im](https://manus.im/app#settings/integrations/api).
 
-```dotenv
+```bash
 API_KEY="api-key-aqui"
 API_URL="https://api.manus.ai/v2/task.create"
 ```
